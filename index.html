@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="ocean">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sangram Prusty · Theoretical and Computational Chemistry</title>
+<meta name="description" content="Sangram Prusty is a theoretical and computational chemist at Boston University working across statistical mechanics, membrane biophysics, cell biology and machine learning for molecular simulation.">
+<link rel="canonical" href="https://sangram-biophy.github.io/">
+<meta property="og:title" content="Sangram Prusty · Theoretical and Computational Chemistry">
+<meta property="og:description" content="Theoretical and computational chemist at Boston University working on membrane biophysics, force fields and machine learning for molecular simulation.">
+<meta property="og:url" content="https://sangram-biophy.github.io/">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Structured data: helps Google and AI search tools identify you correctly -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sangram Prusty",
+  "url": "https://sangram-biophy.github.io/",
+  "jobTitle": "Ph.D. Candidate in Theoretical and Computational Chemistry",
+  "affiliation": { "@type": "CollegeOrUniversity", "name": "Boston University" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Indian Institute of Science Education and Research Kolkata" },
+    { "@type": "ResearchOrganization", "name": "Tata Institute of Fundamental Research, Hyderabad" }
+  ],
+  "email": "mailto:prustysp@bu.edu",
+  "sameAs": ["https://github.com/Sangram-biophy"],
+  "knowsAbout": ["Statistical mechanics", "Rare-event sampling", "Force-field development",
+                 "Machine learning for molecular simulation", "Protein conformational dynamics",
+                 "Membrane biophysics", "Liquid–liquid phase separation"]
+}
+</script>
+
+<!-- Profile icons: Font Awesome Free 6.5.1 by @fontawesome, https://fontawesome.com, license CC BY 4.0 -->
+<style>
+/* Plan: a light header that ends in a living lipid bilayer, a bright
+   paper body, one main accent and one warm second accent. Each palette below
+   defines the same named colors (--p-*); the light and dark blocks map them
+   onto the tokens the page uses. To change palette, change data-palette on <html>. */
+
+/* Midnight indigo and gold (default) */
+:root, :root[data-palette="indigo"] {
+  --p-bg: #f5f6fa; --p-ink: #141a2e; --p-muted: #5a6178; --p-line: #e1e4ee;
+  --p-accent: #2f4fb5; --p-accent2: #b0812a; --p-soft: #e8ecfa; --p-gsoft: #f7efdc; --p-third: #0f8b8d;
+  --p-band: #0b1228; --p-band2: #1a2552; --p-band-muted: #aab3d6; --p-glow1: #7d9cff; --p-glow2: #f0c164;
+  --p-d-bg: #0b0e18; --p-d-surface: #121726; --p-d-ink: #e6e9f3; --p-d-muted: #9aa1b8; --p-d-line: #232a40;
+  --p-d-accent: #93abff; --p-d-accent2: #f0c164; --p-d-soft: #182042; --p-d-gsoft: #2d2716;
+}
+/* Forest green and gold */
+:root[data-palette="forest"] {
+  --p-bg: #f5f7f6; --p-ink: #142019; --p-muted: #5a6760; --p-line: #e0e6e2;
+  --p-accent: #1f7a5a; --p-accent2: #b8862b; --p-soft: #e4f2ec; --p-gsoft: #f6eedc; --p-third: #2f6f9f;
+  --p-band: #0d2420; --p-band2: #133a32; --p-band-muted: #a9c2b8; --p-glow1: #5fd3a2; --p-glow2: #e2b85c;
+  --p-d-bg: #0c1311; --p-d-surface: #121c19; --p-d-ink: #e6eee9; --p-d-muted: #98a9a0; --p-d-line: #22312b;
+  --p-d-accent: #5fd3a2; --p-d-accent2: #e2b85c; --p-d-soft: #15302a; --p-d-gsoft: #2c2616;
+}
+/* Ocean blue and coral */
+:root[data-palette="ocean"] {
+  --p-bg: #f4f7f9; --p-ink: #10202a; --p-muted: #566874; --p-line: #dde6eb;
+  --p-accent: #0b6e8e; --p-accent2: #c7623a; --p-soft: #e1f0f5; --p-gsoft: #fbeae2; --p-third: #5b5bb5;
+  --p-band: #071c28; --p-band2: #0e3a50; --p-band-muted: #9fc0cc; --p-glow1: #5cc8e6; --p-glow2: #f5a26a;
+  --p-d-bg: #0a1217; --p-d-surface: #101c23; --p-d-ink: #e4edf1; --p-d-muted: #95a9b3; --p-d-line: #20313a;
+  --p-d-accent: #5cc8e6; --p-d-accent2: #f5a26a; --p-d-soft: #12303b; --p-d-gsoft: #33241a;
+}
+/* Aubergine and rose copper */
+:root[data-palette="plum"] {
+  --p-bg: #f8f6f8; --p-ink: #22172a; --p-muted: #685b70; --p-line: #ebe3ee;
+  --p-accent: #6d2f86; --p-accent2: #b5603f; --p-soft: #f2e8f6; --p-gsoft: #fbebe4; --p-third: #2f6f9f;
+  --p-band: #1a0d22; --p-band2: #37184a; --p-band-muted: #c6b2cf; --p-glow1: #d39be8; --p-glow2: #f2a07f;
+  --p-d-bg: #130e17; --p-d-surface: #1b1421; --p-d-ink: #efe8f2; --p-d-muted: #ab9eb3; --p-d-line: #2e2336;
+  --p-d-accent: #d39be8; --p-d-accent2: #f2a07f; --p-d-soft: #2b1a33; --p-d-gsoft: #33201a;
+}
+/* Graphite and cardinal red */
+:root[data-palette="cardinal"] {
+  --p-bg: #f6f6f7; --p-ink: #1b1d22; --p-muted: #60646e; --p-line: #e3e4e8;
+  --p-accent: #a3283a; --p-accent2: #2f6aa3; --p-soft: #f8e7ea; --p-gsoft: #e6eef8; --p-third: #6b7a2f;
+  --p-band: #15171c; --p-band2: #2a2e38; --p-band-muted: #b3b8c2; --p-glow1: #ff8a95; --p-glow2: #8ab8ef;
+  --p-d-bg: #0f1013; --p-d-surface: #17191e; --p-d-ink: #eceef2; --p-d-muted: #a2a6b0; --p-d-line: #2a2d35;
+  --p-d-accent: #ff8a95; --p-d-accent2: #8ab8ef; --p-d-soft: #331b1f; --p-d-gsoft: #1a2533;
+}
+
+:root {
+  --bg: var(--p-bg); --surface: #ffffff; --ink: var(--p-ink); --muted: var(--p-muted); --line: var(--p-line);
+  --accent: var(--p-accent); --accent-2: var(--p-accent2); --accent-soft: var(--p-soft); --gold-soft: var(--p-gsoft);
+  --band: var(--p-band); --band-2: var(--p-band2); --band-ink: #f1f3f8; --band-muted: var(--p-band-muted);
+  --shadow: 0 1px 2px rgba(20, 26, 46, .05), 0 8px 24px -14px rgba(20, 26, 46, .2);
+  --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: var(--p-d-bg); --surface: var(--p-d-surface); --ink: var(--p-d-ink); --muted: var(--p-d-muted); --line: var(--p-d-line);
+    --accent: var(--p-d-accent); --accent-2: var(--p-d-accent2); --accent-soft: var(--p-d-soft); --gold-soft: var(--p-d-gsoft);
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 26px -16px rgba(0,0,0,.6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: var(--p-d-bg); --surface: var(--p-d-surface); --ink: var(--p-d-ink); --muted: var(--p-d-muted); --line: var(--p-d-line);
+  --accent: var(--p-d-accent); --accent-2: var(--p-d-accent2); --accent-soft: var(--p-d-soft); --gold-soft: var(--p-d-gsoft);
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 26px -16px rgba(0,0,0,.6);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 1rem; line-height: 1.65; }
+a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.15; text-wrap: balance; margin: 0; }
+.wrap { width: min(1080px, 100% - 40px); margin-inline: auto; }
+.mono { font-family: var(--font-mono); font-size: 0.78rem; }
+.muted { color: var(--muted); }
+::selection { background: var(--accent-2); color: #fff; }
+
+/* ---------- Header band ---------- */
+header.site {
+  position: relative; overflow: hidden; color: var(--band-ink);
+  background:
+    radial-gradient(900px 380px at 88% -10%, color-mix(in srgb, var(--p-glow1) 24%, transparent), transparent 60%),
+    radial-gradient(600px 300px at 5% 120%, color-mix(in srgb, var(--p-glow2) 16%, transparent), transparent 60%),
+    linear-gradient(160deg, var(--band-2), var(--band));
+}
+header.site .wrap { position: relative; }
+.id-row { display: flex; align-items: center; gap: 30px; padding: 48px 0 30px; flex-wrap: wrap; }
+.photo {
+  width: 132px; height: 132px; border-radius: 50%; flex: none; position: relative;
+  display: grid; place-items: center; background: color-mix(in srgb, var(--p-band2) 70%, var(--p-glow1));
+  font-family: var(--font-display); font-size: 2.8rem; color: var(--band-ink);
+}
+.photo::before {
+  content: ""; position: absolute; inset: -6px; border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--p-glow1), var(--p-glow2), var(--p-glow1) 60%, var(--p-accent), var(--p-glow1));
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
+          mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
+  animation: spin 18s linear infinite;
+}
+.photo { isolation: isolate; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.id-text { flex: 1; min-width: 260px; }
+.id-text h1 { font-size: clamp(2.3rem, 5vw, 3.3rem); letter-spacing: -0.02em; color: #fff; }
+.id-text .title { font-size: 1.12rem; margin: 6px 0 2px; color: var(--band-ink); }
+.id-text .aff { color: var(--band-muted); margin: 0; }
+.now { margin-top: 12px; font-size: 0.95rem; color: var(--band-muted); min-height: 1.6em; }
+.now b { color: var(--p-glow2); font-weight: 500; display: inline-block; transition: opacity .35s, transform .35s; }
+.now b.out { opacity: 0; transform: translateY(6px); }
+.icons { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+.icons a, .theme-btn {
+  display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.16); color: var(--band-ink); text-decoration: none; font-size: 0.86rem;
+  background: rgba(255,255,255,.06); backdrop-filter: blur(4px);
+  transition: background .2s, border-color .2s, transform .2s; cursor: pointer; font-family: var(--font-body);
+}
+.icons a:hover, .theme-btn:hover { background: rgba(255,255,255,.14); border-color: color-mix(in srgb, var(--p-glow2) 70%, transparent); transform: translateY(-2px); }
+.icons svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.7; }
+
+nav.main { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 0 0 18px; }
+nav.main a {
+  padding: 8px 16px; color: var(--band-muted); text-decoration: none; font-size: 0.93rem; white-space: nowrap;
+  border-radius: 999px; transition: color .2s, background .2s;
+}
+nav.main a:hover { color: #fff; background: rgba(255,255,255,.08); }
+nav.main a[aria-current="page"] { color: var(--band); background: var(--band-ink); font-weight: 500; }
+
+/* ---------- Pages ---------- */
+main { padding: 48px 0 80px; }
+.view { display: none; }
+.view.on { display: block; animation: rise .5s ease both; }
+@keyframes rise { from { opacity: .3; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .view.on, .photo::before { animation: none; } .now b { transition: none; } }
+.page-title { font-size: 2.3rem; margin-bottom: 8px; letter-spacing: -0.01em; }
+.page-title::after { content: ""; display: block; width: 56px; height: 3px; margin-top: 12px; border-radius: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+.page-sub { color: var(--muted); margin: 14px 0 30px; max-width: 64ch; }
+h2.sec { font-size: 1.55rem; margin: 52px 0 18px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+h2.sec a { font-family: var(--font-body); font-size: 0.9rem; text-decoration: none; }
+h2.sec a:hover { text-decoration: underline; }
+
+.about {
+  display: grid; gap: 14px; font-size: 1.05rem; padding: 30px 34px; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); position: relative;
+}
+.about::before { content: ""; position: absolute; left: 0; top: 24px; bottom: 24px; width: 3px; border-radius: 0 3px 3px 0; background: linear-gradient(var(--accent), var(--accent-2)); }
+.about p { margin: 0; max-width: 76ch; }
+.about b { font-weight: 600; color: var(--ink); }
+@media (max-width: 600px) { .about { padding: 22px 20px; } }
+
+/* Count-up numbers */
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 22px; }
+.stat {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 18px;
+  box-shadow: var(--shadow); text-decoration: none; color: var(--ink); position: relative; overflow: hidden;
+  transition: transform .25s, border-color .25s;
+}
+.stat::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transform: scaleX(.25); transform-origin: left; transition: transform .35s; }
+.stat:hover { transform: translateY(-4px); border-color: transparent; }
+.stat:hover::after { transform: scaleX(1); }
+.stat .num {
+  font-family: var(--font-display); font-size: 2.6rem; line-height: 1; font-variant-numeric: tabular-nums;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.stat .lab { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+@media (max-width: 820px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+/* Research cards */
+.r-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.r-card {
+  --tint: var(--accent); --tint-soft: var(--accent-soft);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px;
+  display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow);
+  transition: transform .25s, border-color .25s; text-decoration: none; color: var(--ink); position: relative; overflow: hidden;
+}
+.r-card:nth-child(3) { --tint: var(--accent-2); --tint-soft: var(--gold-soft); }
+:root[data-theme="dark"] .r-card:hover { transform: translateY(-4px); border-color: var(--tint); }
+.r-card .k { align-self: start; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: .07em; text-transform: uppercase; color: var(--tint); background: var(--tint-soft); padding: 3px 10px; border-radius: 999px; }
+.r-card h3 { font-size: 1.28rem; }
+.r-card p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+.r-card .go { margin-top: auto; font-size: 0.88rem; color: var(--tint); font-weight: 500; transition: transform .2s; }
+.r-card:hover .go { transform: translateX(4px); }
+@media (max-width: 820px) { .r-cards { grid-template-columns: 1fr; } }
+
+/* News feed */
+.feed { list-style: none; margin: 0; padding: 4px 0 0; position: relative; }
+.feed::before { content: ""; position: absolute; left: 5px; top: 10px; bottom: 14px; width: 2px; background: linear-gradient(var(--accent), var(--accent-2), transparent); }
+.feed li { position: relative; padding: 0 0 20px 30px; }
+.feed li::before { content: ""; position: absolute; left: 0; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent-2); box-shadow: 0 0 0 4px var(--bg); }
+.feed li:first-child::before { background: var(--accent-2); }
+.feed .when { font-family: var(--font-mono); font-size: 0.74rem; color: var(--accent); background: var(--accent-soft); padding: 1px 8px; border-radius: 999px; }
+.feed .what { display: block; margin-top: 4px; }
+
+/* Publications */
+.pub-tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chips button { border: 1px solid var(--line); background: var(--surface); color: var(--muted); border-radius: 999px; padding: 6px 14px; cursor: pointer; font-size: 0.86rem; font-family: var(--font-body); transition: all .2s; }
+.chips button:hover { color: var(--ink); border-color: var(--accent); }
+.chips button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 6px 16px -8px var(--accent); }
+:root[data-theme="dark"] .chips button[aria-pressed="true"] { color: var(--band); }
+.search { flex: 1; min-width: 200px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 8px 16px; font: inherit; font-size: 0.9rem; }
+.search:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px var(--accent-soft); }
+.pub-meta { font-size: 0.82rem; color: var(--muted); margin: 0 0 8px; }
+.yr-head { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-size: 1.3rem; color: var(--accent-2); margin: 26px 0 6px; }
+.yr-head::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.pub { display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding: 16px; border-radius: 12px; border: 1px solid transparent; transition: background .2s, border-color .2s, box-shadow .2s; }
+.pub:hover { background: var(--surface); border-color: var(--line); box-shadow: var(--shadow); }
+#recentPubs .pub { background: var(--surface); border-color: var(--line); box-shadow: var(--shadow); margin-bottom: 10px; }
+.pub .n { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); padding-top: 4px; }
+.pub .t { font-family: var(--font-display); font-size: 1.14rem; line-height: 1.35; }
+.pub .a { font-size: 0.9rem; color: var(--muted); margin-top: 4px; }
+.pub .a b { color: var(--ink); font-weight: 600; background: linear-gradient(transparent 62%, var(--gold-soft) 62%); }
+.pub .v { font-size: 0.9rem; font-style: italic; }
+.pub .row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; align-items: center; }
+.tag { font-family: var(--font-mono); font-size: 0.68rem; padding: 2px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.tag.rev { background: var(--gold-soft); color: var(--accent-2); }
+.cite-btn { border: 0; background: none; color: var(--muted); font-size: 0.8rem; cursor: pointer; font-family: var(--font-body); padding: 0; margin-left: 4px; text-decoration: underline; text-underline-offset: 3px; }
+.cite-btn:hover { color: var(--accent); }
+.empty { color: var(--muted); padding: 20px 12px; }
+
+/* Research page */
+figure.bilayer { margin: 0 0 34px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); overflow: hidden; box-shadow: var(--shadow); }
+figure.bilayer canvas { display: block; width: 100%; height: 220px; cursor: pointer; background: linear-gradient(180deg, var(--accent-soft), transparent 30%, transparent 70%, var(--gold-soft)); }
+figure.bilayer figcaption { padding: 12px 18px; border-top: 1px solid var(--line); font-size: 0.86rem; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+figure.bilayer figcaption .mono { color: var(--accent); }
+.theme { display: grid; grid-template-columns: 1fr 290px; gap: 34px; padding: 32px 0; border-top: 1px solid var(--line); scroll-margin-top: 20px; }
+.theme h3 { font-size: 1.6rem; margin-bottom: 12px; }
+.theme p { margin: 0 0 12px; max-width: 64ch; }
+.theme aside { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 14px; padding: 18px 20px; font-size: 0.9rem; align-self: start; box-shadow: var(--shadow); }
+.theme:nth-of-type(2) aside { border-top-color: var(--p-third); }
+.theme:nth-of-type(3) aside { border-top-color: var(--accent-2); }
+.theme aside .lab { font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent); letter-spacing: .07em; text-transform: uppercase; display: block; margin: 12px 0 4px; }
+.theme aside .lab:first-child { margin-top: 0; }
+.theme aside ul { margin: 0; padding-left: 18px; }
+@media (max-width: 820px) { .theme { grid-template-columns: 1fr; gap: 14px; } }
+
+/* Record lists */
+.rec { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+.rec li { display: grid; grid-template-columns: 1fr auto; gap: 2px 20px; padding: 16px 20px; border-bottom: 1px solid var(--line); transition: background .2s; }
+.rec li:last-child { border-bottom: 0; }
+.rec li:hover { background: color-mix(in srgb, var(--accent-soft) 55%, transparent); }
+.rec .h { font-weight: 500; }
+.rec .w { font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent-2); white-space: nowrap; padding-top: 3px; }
+.rec .d { grid-column: 1 / -1; color: var(--muted); font-size: 0.92rem; }
+.timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 162px; top: 22px; bottom: 22px; width: 2px; background: linear-gradient(var(--accent), var(--accent-2)); }
+.timeline li { display: grid; grid-template-columns: 150px 1fr; gap: 34px; padding: 16px 0; position: relative; }
+.timeline li::before { content: ""; position: absolute; left: 157px; top: 24px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); }
+.timeline li > div { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; box-shadow: var(--shadow); }
+.timeline .w { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); padding-top: 18px; text-align: right; }
+.timeline h3 { font-size: 1.2rem; }
+.timeline p { margin: 4px 0 0; color: var(--muted); font-size: 0.94rem; }
+@media (max-width: 600px) {
+  .timeline::before, .timeline li::before { display: none; }
+  .timeline li { grid-template-columns: 1fr; gap: 6px; }
+  .timeline .w { text-align: left; padding-top: 0; }
+}
+.skill-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.skill-groups > div { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; box-shadow: var(--shadow); }
+.skill-groups h3 { font-size: 1.15rem; margin-bottom: 12px; }
+.skill-groups .chips span { border-radius: 999px; padding: 3px 11px; font-size: 0.84rem; background: var(--accent-soft); color: var(--accent); }
+.skill-groups > div:nth-child(2) .chips span { background: var(--gold-soft); color: var(--accent-2); }
+@media (max-width: 820px) { .skill-groups { grid-template-columns: 1fr; } }
+
+footer { background: linear-gradient(160deg, var(--band-2), var(--band)); padding: 30px 0 38px; font-size: 0.86rem; color: var(--band-muted); }
+footer .wrap { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+footer nav { display: flex; gap: 16px; flex-wrap: wrap; }
+footer nav a { color: var(--band-muted); text-decoration: none; }
+footer nav a:hover { color: var(--p-glow2); }
+.toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--band); color: var(--band-ink); padding: 9px 18px; border-radius: 999px; font-size: 0.86rem; opacity: 0; transition: opacity .25s, transform .25s; pointer-events: none; box-shadow: var(--shadow); }
+.toast.show { opacity: 1; transform: translateX(-50%); }
+
+/* ---------- Additions: Home metrics, links, map, scales ---------- */
+.hero-aff { font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: .08em; text-transform: uppercase; color: var(--p-glow2); margin: 0 0 6px; }
+.stats.four { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 820px) { .stats.four { grid-template-columns: repeat(2, 1fr); } }
+.home-grid { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: start; }
+@media (max-width: 900px) { .home-grid { grid-template-columns: 1fr; } }
+
+/* Discipline map */
+.map-wrap { display: grid; grid-template-columns: 1.25fr 1fr; gap: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 18px; }
+@media (max-width: 900px) { .map-wrap { grid-template-columns: 1fr; } }
+#discMap { width: 100%; height: auto; display: block; }
+#discMap .edge { stroke: var(--line); stroke-width: 1.6; transition: stroke .3s; }
+#discMap .edge.on { stroke: var(--accent-2); stroke-width: 2.4; stroke-dasharray: 6 5; animation: flow 1.2s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -22; } }
+#discMap .node { cursor: pointer; }
+#discMap .node circle { fill: var(--surface); stroke: var(--accent); stroke-width: 1.8; transition: fill .25s, r .25s; }
+#discMap .node text { fill: var(--ink); font-family: var(--font-body); font-size: 12.5px; text-anchor: middle; pointer-events: none; }
+#discMap .node .ic { font-family: var(--font-mono); font-size: 11px; fill: var(--accent); }
+#discMap .node:hover circle, #discMap .node.on circle { fill: var(--accent-soft); }
+#discMap .node.on circle { stroke: var(--accent-2); stroke-width: 2.6; }
+#discMap .node:focus-visible circle { stroke: var(--accent-2); stroke-width: 3; }
+#discMap .node:focus { outline: none; }
+#discMap .hub circle { fill: url(#hubGrad); stroke: none; }
+#discMap .hub text { fill: #fff; font-family: var(--font-display); font-size: 15px; text-anchor: middle; }
+.disc-panel { padding: 8px 8px 8px 4px; display: flex; flex-direction: column; gap: 10px; }
+.disc-panel .k { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: .07em; text-transform: uppercase; color: var(--accent-2); }
+.disc-panel h3 { font-size: 1.45rem; }
+.disc-panel p { margin: 0; color: var(--muted); }
+.disc-panel .with { font-size: 0.9rem; }
+.disc-panel .with b { color: var(--ink); font-weight: 500; }
+.disc-panel .plist { display: flex; flex-wrap: wrap; gap: 6px; }
+.disc-panel .plist a { font-family: var(--font-mono); font-size: 0.74rem; text-decoration: none; padding: 3px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.disc-panel .plist a:hover { background: var(--accent); color: #fff; }
+.disc-hint { font-size: 0.82rem; color: var(--muted); margin-top: auto; }
+
+/* Scales strip */
+.scales { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin: 6px 0 36px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+.scale { padding: 18px 16px; border-right: 1px solid var(--line); position: relative; transition: background .25s; }
+.scale:last-child { border-right: 0; }
+.scale:hover { background: var(--accent-soft); }
+.scale .sz { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-2); }
+.scale h4 { font-family: var(--font-display); font-weight: 500; font-size: 1.12rem; margin: 4px 0 6px; }
+.scale p { margin: 0; font-size: 0.86rem; color: var(--muted); }
+.scale::after { content: "→"; position: absolute; right: -9px; top: 18px; z-index: 1; width: 18px; height: 18px; border-radius: 50%; background: var(--surface); border: 1px solid var(--line); font-size: 11px; display: grid; place-items: center; color: var(--accent); }
+.scale:last-child::after { display: none; }
+@media (max-width: 820px) { .scales { grid-template-columns: 1fr; } .scale { border-right: 0; border-bottom: 1px solid var(--line); } .scale::after { display: none; } }
+
+/* Collaborations */
+.collabs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.collab { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); }
+.collab .f { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: .07em; text-transform: uppercase; color: var(--accent); }
+.collab h4 { font-family: var(--font-display); font-weight: 500; font-size: 1.1rem; margin: 6px 0; }
+.collab p { margin: 0; font-size: 0.88rem; color: var(--muted); }
+@media (max-width: 820px) { .collabs { grid-template-columns: 1fr; } }
+
+.vision { background: linear-gradient(140deg, var(--band-2), var(--band)); color: var(--band-ink); border-radius: 16px; padding: 30px 32px; margin-top: 40px; position: relative; overflow: hidden; }
+.vision h3 { font-size: 1.6rem; color: #fff; margin-bottom: 10px; }
+.vision p { margin: 0 0 12px; max-width: 70ch; color: var(--band-muted); }
+.vision ol { margin: 6px 0 0; padding-left: 20px; display: grid; gap: 8px; max-width: 72ch; }
+.vision li::marker { color: var(--p-glow2); font-family: var(--font-mono); }
+.vision b { color: var(--p-glow2); font-weight: 500; }
+
+.up-tag { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-2); background: var(--gold-soft); padding: 2px 10px; border-radius: 999px; }
+.edu-card { display: grid; grid-template-columns: 1fr auto; gap: 6px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px 26px; box-shadow: var(--shadow); margin-bottom: 16px; border-left: 4px solid var(--accent); }
+.edu-card:nth-child(even) { border-left-color: var(--accent-2); }
+.edu-card h3 { font-size: 1.4rem; }
+.edu-card .w { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-2); }
+.edu-card .deg { grid-column: 1 / -1; font-weight: 500; }
+.edu-card .d { grid-column: 1 / -1; color: var(--muted); font-size: 0.94rem; margin: 0; }
+.footer-nav-row { display: flex; flex-direction: column; gap: 6px; }
+
+/* Icon-only profile links with tooltips */
+.icons { align-items: center; gap: 8px; }
+.icons .ico { width: 40px; height: 40px; padding: 0; justify-content: center; position: relative; }
+.icons .ico svg { width: 18px; height: 18px; }
+.icons .sep { width: 1px; height: 22px; background: rgba(255,255,255,.18); margin: 0 4px; }
+[data-tip] { position: relative; }
+[data-tip]::after {
+  content: attr(data-tip); position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translate(-50%, 4px);
+  background: var(--band-ink); color: var(--band); font-size: 0.74rem; padding: 3px 9px; border-radius: 6px; white-space: nowrap;
+  opacity: 0; pointer-events: none; transition: opacity .18s, transform .18s; font-family: var(--font-body);
+}
+[data-tip]:hover::after, [data-tip]:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
+.seeking-pill { display: inline-flex; align-items: center; gap: 8px; margin: 14px 0 0; padding: 5px 12px; border-radius: 999px; font-size: 0.82rem; color: var(--band-ink); background: color-mix(in srgb, var(--p-glow2) 16%, transparent); border: 1px solid color-mix(in srgb, var(--p-glow2) 40%, transparent); }
+.seeking-pill span { width: 7px; height: 7px; border-radius: 50%; background: var(--p-glow2); box-shadow: 0 0 0 0 var(--p-glow2); animation: ping 2.4s infinite; }
+@keyframes ping { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--p-glow2) 60%, transparent); } 80%, 100% { box-shadow: 0 0 0 8px transparent; } }
+@media (prefers-reduced-motion: reduce) { .seeking-pill span { animation: none; } }
+
+
+/* ---------- Light header with a living membrane along its lower edge ---------- */
+header.site {
+  color: var(--ink); border-bottom: 0;
+  background:
+    radial-gradient(720px 320px at 92% 0%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 65%),
+    radial-gradient(520px 260px at 0% 100%, color-mix(in srgb, var(--accent-2) 11%, transparent), transparent 60%),
+    var(--surface);
+}
+.membrane-strip { display: block; width: 100%; height: 96px; }
+.photo { background: var(--accent-soft); color: var(--accent); }
+.photo::before { background: conic-gradient(from 0deg, var(--accent), var(--accent-2), var(--accent) 60%, var(--accent-2), var(--accent)); }
+.hero-aff { color: var(--accent); }
+.id-text h1 { color: var(--ink); }
+.id-text .title { color: var(--ink); }
+.id-text .aff, .now { color: var(--muted); }
+.now b { color: var(--accent-2); }
+.icons a, .theme-btn { border-color: var(--line); color: var(--ink); background: var(--bg); backdrop-filter: none; }
+.icons a:hover, .theme-btn:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.icons .ico { font-size: 17px; }
+.icons svg { fill: currentColor; stroke: none; width: 1em; height: 1em; }
+.icons .sep { background: var(--line); }
+[data-tip]::after { background: var(--ink); color: var(--bg); }
+.seeking-pill { color: var(--ink); background: var(--gold-soft); border-color: color-mix(in srgb, var(--accent-2) 35%, transparent); }
+.seeking-pill span { background: var(--accent-2); }
+nav.main { padding-bottom: 6px; }
+nav.main a { color: var(--muted); }
+nav.main a:hover { color: var(--ink); background: var(--accent-soft); }
+nav.main a[aria-current="page"] { color: var(--surface); background: var(--ink); }
+
+/* ---------- Phase-separation simulation ---------- */
+figure.sim { margin: 0 0 36px; display: grid; grid-template-columns: 1fr 280px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+.sim-stage { position: relative; min-width: 0; }
+#phaseSim { display: block; width: 100%; aspect-ratio: 2 / 1; }
+.sim-legend { position: absolute; left: 12px; bottom: 12px; display: flex; gap: 12px; flex-wrap: wrap; padding: 6px 10px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 85%, transparent); font-size: 0.78rem; color: var(--ink); }
+.sim-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+.sw.lo { background: var(--accent-2); } .sw.ld { background: color-mix(in srgb, var(--accent) 22%, var(--surface)); border: 1px solid var(--line); } .sw.pr { background: var(--accent); border-radius: 50%; }
+.sim-ui { border-left: 1px solid var(--line); padding: 18px; display: flex; flex-direction: column; gap: 16px; }
+.ctl label { display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 500; }
+.ctl output { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); font-weight: 400; }
+.ctl input[type=range] { width: 100%; accent-color: var(--accent); margin: 8px 0 2px; }
+.ctl .ends { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--muted); font-family: var(--font-mono); }
+.sim-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.sim-stats div { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
+.sim-stats span { display: block; font-size: 0.72rem; color: var(--muted); }
+.sim-stats b { font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; font-variant-numeric: tabular-nums; }
+.btn-sim { border: 1px solid var(--ink); background: var(--ink); color: var(--surface); border-radius: 999px; padding: 9px 14px; cursor: pointer; font-family: var(--font-body); font-size: 0.86rem; }
+.btn-sim:hover { background: var(--accent); border-color: var(--accent); }
+figure.sim figcaption { grid-column: 1 / -1; padding: 12px 18px; border-top: 1px solid var(--line); font-size: 0.85rem; color: var(--muted); }
+@media (max-width: 860px) { figure.sim { grid-template-columns: 1fr; } .sim-ui { border-left: 0; border-top: 1px solid var(--line); } }
+
+/* ---------- Experience cards ---------- */
+.xp { display: grid; gap: 18px; }
+.xp-card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 16px; padding: 24px 26px; box-shadow: var(--shadow); }
+.xp-card:nth-child(2) { border-left-color: var(--accent-2); }
+.xp-card:nth-child(3) { border-left-color: var(--p-third); }
+.xp-head { display: flex; justify-content: space-between; align-items: baseline; gap: 6px 20px; flex-wrap: wrap; }
+.xp-head h3 { font-size: 1.35rem; }
+.xp-when { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-2); white-space: nowrap; }
+.xp-org { margin: 2px 0 0; font-weight: 500; }
+.xp-adv { margin: 2px 0 0; color: var(--muted); font-size: 0.92rem; }
+.xp-sum { margin: 12px 0 0; max-width: 72ch; }
+ul.did { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; max-width: 76ch; }
+ul.did li { position: relative; padding-left: 22px; font-size: 0.96rem; }
+ul.did li::before { content: ""; position: absolute; left: 4px; top: 9px; width: 7px; height: 7px; transform: rotate(45deg); background: var(--accent); border-radius: 1px; }
+.xp-foot { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line); align-items: center; }
+.xp-foot .lbl { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-right: 4px; }
+.xp-foot a, .xp-foot .out { font-family: var(--font-mono); font-size: 0.72rem; padding: 2px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.xp-foot a:hover { background: var(--accent); color: var(--surface); }
+.xp-foot .tool { font-size: 0.74rem; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.xp-foot .gap { flex-basis: 100%; height: 0; }
+
+.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="id-row">
+      <div class="photo"><span aria-hidden="true">SP</span><img src="photo.jpg" alt="Portrait of Sangram Prusty" onerror="this.remove()"></div>
+      <div class="id-text">
+        <p class="hero-aff">Boston University · Department of Chemistry · Boston, MA</p>
+        <h1>Sangram Prusty</h1>
+        <p class="title">Ph.D. Candidate, Theoretical and Computational Chemistry</p>
+        <p class="aff">Statistical mechanics · Membrane biophysics · Machine learning for molecular simulation</p>
+        <p class="now">Currently working on <b id="now">membrane–protein coupling</b></p>
+        <div class="icons">
+          <a class="ico" href="#" data-link="scholar" aria-label="Google Scholar" data-tip="Google Scholar"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg></a>
+          <a class="ico" href="#" data-link="github" aria-label="GitHub" data-tip="GitHub"><svg viewBox="0 0 496 512" aria-hidden="true"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+          <a class="ico" href="#" data-link="linkedin" aria-label="LinkedIn" data-tip="LinkedIn"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+          <a class="ico" href="#" data-link="orcid" aria-label="ORCID" data-tip="ORCID"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z"/></svg></a>
+          <a class="ico" href="#" data-link="researchgate" aria-label="ResearchGate" data-tip="ResearchGate"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"/></svg></a>
+          <a class="ico" href="mailto:prustysp@bu.edu" aria-label="Email prustysp@bu.edu" data-tip="Email"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
+          <a class="ico" href="#" data-link="cv" aria-label="Download CV" data-tip="CV (PDF)"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></a>
+          <span class="sep" aria-hidden="true"></span>
+          <button class="ico theme-btn" id="themeBtn" type="button" aria-label="Switch light or dark mode" data-tip="Light / dark"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg></button>
+        </div>
+        <p class="seeking-pill"><span></span>Ph.D. expected 2027 · open to postdoctoral opportunities</p>
+      </div>
+    </div>
+    <nav class="main" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#talks">Talks</a>
+      <a href="#awards">Awards</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#service">Service</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  </div>
+  <canvas id="membrane" class="membrane-strip" role="img" aria-label="Animated side view of a lipid bilayer of saturated lipid, unsaturated lipid and cholesterol that separates into ordered and disordered domains, while two transmembrane helices form a dimer that moves into the ordered domain and becomes more upright"></canvas>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= HOME ================= -->
+  <div class="view" id="v-home">
+    <div class="home-grid">
+      <div class="about">
+        <p><b>Sangram Prusty</b> is a theoretical and computational chemist working at the interface of <b>statistical mechanics</b>, <b>membrane biophysics</b> and <b>cell biology</b>. A Ph.D. candidate at <b>Boston University</b> with <b>Prof. Qiang Cui</b> and <b>Prof. John E. Straub</b>, he builds multiscale models, from polarizable all-atom force fields to coarse-grained Martini membranes, to explain how the physical state of a membrane regulates protein function. His work addresses how bilayer thickness steers protein traffic from the ER to the Golgi, and how lipid phase separation controls dimerization of <b>APP C99</b>, the precursor of the amyloid-β peptide in Alzheimer's disease.</p>
+        <p>His research is closely tied to experiment. He has collaborated with <b>cell biologists</b> on cargo sorting in the secretory pathway, with <b>NMR spectroscopists</b> on force-field validation, with the <b>Martini</b> community (<b>Marrink, Souza</b> and coworkers) on coarse-grained force-field development, and with <b>materials and electronic-structure scientists</b> on de novo peptides, combining rare-event sampling, free-energy methods and <b>machine learning</b> (GROMACS, OpenMM, PLUMED, PyTorch). Earlier, at <b>TIFR Hyderabad</b> and <b>IISER Kolkata</b>, where he majored in chemistry with a minor in biology, he showed how correlated fluctuations guide a viral peptide to its binding site on RNA.</p>
+        <p>He has authored <b>8 publications</b>, six as first or co-first author, in <i>J. Chem. Theory Comput.</i>, <i>J. Chem. Inf. Model.</i>, <i>J. Chem. Phys.</i>, <i>J. Phys. Chem. B</i>, <i>J. Phys. Chem. Lett.</i> and <i>Biophys. J.</i>, with a first-author manuscript under review at <i>Science Advances</i>. He helped write an <b>NIH R21</b> proposal and a successful <b>NSF ACCESS</b> allocation, reviews for <i>J. Chem. Phys.</i> and <i>Biophysical Journal</i>, mentors undergraduate and high-school researchers, and hosts the <b>Greater Boston Area TheoChem Seminar Series</b>. He was a <b>DST–INSPIRE</b> scholar.</p>
+      </div>
+    </div>
+
+    <h2 class="sec">Metrics</h2>
+    <div class="stats four" id="stats">
+      <a class="stat" href="#publications"><div class="num" data-to="8">8</div><div class="lab">Publications</div></a>
+      <a class="stat" href="#talks"><div class="num" data-to="4">4</div><div class="lab">Conference presentations</div></a>
+      <a class="stat" href="#awards"><div class="num" data-to="4">4</div><div class="lab">Awards and fellowships</div></a>
+      <a class="stat" href="#awards"><div class="num" data-to="3">3</div><div class="lab">Grants and funding proposals</div></a>
+    </div>
+
+    <h2 class="sec">Research across disciplines <a href="#research">Full research →</a></h2>
+    <div class="map-wrap">
+      <svg id="discMap" viewBox="0 0 560 410" role="group" aria-label="Map of the disciplines my research connects. Select a discipline to see related work."></svg>
+      <div class="disc-panel" aria-live="polite">
+        <span class="k" id="dpKey">Discipline</span>
+        <h3 id="dpTitle"></h3>
+        <p id="dpText"></p>
+        <p class="with" id="dpWith"></p>
+        <div class="plist" id="dpPapers"></div>
+        <p class="disc-hint">Select a field to see the related papers.</p>
+      </div>
+    </div>
+
+    <h2 class="sec">Latest publications</h2>
+    <div id="latestPubs"></div>
+
+    <h2 class="sec">Upcoming publications</h2>
+    <div id="upcomingPubs"></div>
+    <p style="margin-top:14px"><a href="#publications">View all 8 publications →</a></p>
+  </div>
+
+  <!-- ================= RESEARCH ================= -->
+  <div class="view" id="v-research">
+    <h2 class="page-title">Research</h2>
+    <p class="page-sub">I connect physical chemistry to biology across scales. Statistical mechanics and multiscale simulation explain how the physical state of a membrane shapes protein behavior, and better force fields make those simulations trustworthy.</p>
+
+
+    <article class="theme" id="t1">
+      <div>
+        <h3>Membrane–protein coupling and lipid phase behavior</h3>
+        <p>Cell membranes are not passive solvents. Their thickness, order and lateral organization change which conformations and assemblies membrane proteins adopt. My doctoral work asks how these physical properties regulate proteins involved in neurodegeneration and in cellular trafficking.</p>
+        <p>With the Straub group I study APP C99, the precursor of amyloid-β, quantifying the thermodynamic competition between its dimerization and its partitioning into liquid-ordered and liquid-disordered domains, and the kinetics of phase separation in ternary lipid mixtures that contain it. With the Cui group and experimental cell biologists in the Miller and Januschke groups, I showed how bilayer thickness and transmembrane-domain dynamics drive directional ER–Golgi traffic through the cargo receptor Erv14/cornichon.</p>
+      </div>
+      <aside>
+        <span class="lab">Disciplines</span>
+        <ul><li>Membrane biophysics</li><li>Cell biology</li><li>Neurodegeneration</li></ul>
+        <span class="lab">Methods</span>
+        <ul><li>Coarse-grained and all-atom MD</li><li>Free-energy and rare-event sampling</li></ul>
+        <span class="lab">Papers</span>
+        <a href="#publications">[1] Sci. Adv. (under review)</a><br><a href="#publications">[2] J. Chem. Phys. 2026</a><br><a href="#publications">[5] J. Chem. Theory Comput. 2025</a>
+      </aside>
+    </article>
+
+    <article class="theme" id="t2">
+      <div>
+        <h3>Force-field development: polarizable and coarse-grained models</h3>
+        <p>Simulations are only as reliable as their energy functions. Proteins with flexible loops and dense charge are especially hard to model, because electronic polarization matters and fixed-charge models can miss it.</p>
+        <p>I carried out a systematic comparison of polarizable (Drude) and nonpolarizable CHARMM-family force fields for such proteins, validating conformational dynamics against NMR in collaboration with Prof. Rafael Brüschweiler, and wrote a commentary on polarization in phosphorylated proteins for <i>Biophysical Journal</i>. At the coarse-grained level, I contribute to the development of Martini force fields with Prof. Siewert-Jan Marrink, Dr. Paulo C. T. Souza and coworkers. With materials and electronic-structure groups, I contributed to work combining first-principles theory and machine learning to reveal electronic-structure fluctuations in a de novo peptide.</p>
+      </div>
+      <aside>
+        <span class="lab">Disciplines</span>
+        <ul><li>NMR spectroscopy</li><li>Coarse-grained modeling</li><li>Machine learning</li></ul>
+        <span class="lab">Methods</span>
+        <ul><li>Drude polarizable models</li><li>CHARMM36m benchmarking</li><li>Martini coarse-grained models</li></ul>
+        <span class="lab">Papers</span>
+        <a href="#publications">[3] Biophys. J. 2026</a><br><a href="#publications">[4] J. Chem. Inf. Model. 2025</a><br><a href="#publications">[6] J. Chem. Inf. Model. 2025</a>
+      </aside>
+    </article>
+
+    <article class="theme" id="t3">
+      <div>
+        <h3>Fluctuations and allostery in RNA–protein recognition</h3>
+        <p>Before my Ph.D., I studied how the HIV Tat peptide finds the TAR RNA. Using molecular dynamics, enhanced sampling and non-affine fluctuation analysis, a concept borrowed from the physics of disordered solids, I showed that correlated domain fluctuations navigate the peptide's search along RNA.</p>
+        <p>This line of work also contributed to understanding how RNA uses dynamic conformational selection and entropic allostery to control cascades of protein binding.</p>
+      </div>
+      <aside>
+        <span class="lab">Disciplines</span>
+        <ul><li>RNA biology and virology</li><li>Soft-matter physics</li></ul>
+        <span class="lab">Methods</span>
+        <ul><li>Enhanced sampling</li><li>Non-affine fluctuation analysis</li></ul>
+        <span class="lab">Papers</span>
+        <a href="#publications">[7] J. Phys. Chem. Lett. 2024</a><br><a href="#publications">[8] J. Phys. Chem. B 2021</a>
+      </aside>
+    </article>
+
+    <h2 class="sec">Collaborations across fields</h2>
+    <div class="collabs">
+      <div class="collab"><span class="f">Cell biology</span><h4>Miller and Januschke groups</h4><p>Experimental tests of membrane-thickness-based cargo sorting by Erv14/cornichon.</p></div>
+      <div class="collab"><span class="f">NMR spectroscopy</span><h4>Brüschweiler group</h4><p>NMR validation of protein dynamics for polarizable and nonpolarizable force fields.</p></div>
+      <div class="collab"><span class="f">Coarse-grained modeling</span><h4>Marrink and Souza groups</h4><p>Development of Martini coarse-grained force fields.</p></div>
+      <div class="collab"><span class="f">Materials and electronic structure</span><h4>Copp, Sharifzadeh and Hochbaum groups</h4><p>First-principles theory and machine learning for de novo peptide electronics.</p></div>
+    </div>
+
+    <div class="vision">
+      <h3>Looking ahead</h3>
+      <p>I aim to build predictive, physics-based models that connect membrane physical chemistry to cellular function, combining <b>multiscale force fields</b>, <b>machine learning</b> and <b>rare-event sampling</b>, and developed in close collaboration with experiment.</p>
+    </div>
+  </div>
+
+  <!-- ================= PUBLICATIONS ================= -->
+  <div class="view" id="v-publications">
+    <h2 class="page-title">Publications</h2>
+    <p class="page-sub">Filter by topic, search by keyword, or copy a citation.</p>
+    <div class="pub-tools">
+      <div class="chips" role="group" aria-label="Filter publications">
+        <button type="button" data-f="all" aria-pressed="true">All</button>
+        <button type="button" data-f="first" aria-pressed="false">First author</button>
+        <button type="button" data-f="membranes" aria-pressed="false">Membranes</button>
+        <button type="button" data-f="forcefields" aria-pressed="false">Force fields</button>
+        <button type="button" data-f="rna" aria-pressed="false">RNA–protein</button>
+        <button type="button" data-f="other" aria-pressed="false">Electronic structure</button>
+      </div>
+      <input class="search" id="pubSearch" type="search" placeholder="Search titles, journals, coauthors" aria-label="Search publications">
+    </div>
+    <p class="pub-meta"><span id="pubCount"></span> · † equal contribution · * corresponding author</p>
+    <div id="pubList"></div>
+  </div>
+
+  <!-- ================= TALKS ================= -->
+  <div class="view" id="v-talks">
+    <h2 class="page-title">Talks</h2>
+    <p class="page-sub">Selected conference presentations.</p>
+    <ul class="rec">
+      <li><span class="h">Liquid-ordered membranes stabilize APP C99 dimers and amplify cholesterol sensitivity</span><span class="w">Feb 2026</span><span class="d">Poster · Biophysical Society Annual Meeting</span></li>
+      <li><span class="h">Comparative study of Im7 dynamics: CHARMM36m vs. Drude2019 force fields with NMR validation</span><span class="w">Feb 2024</span><span class="d">Platform talk and poster · Biophysical Society Annual Meeting</span></li>
+      <li><span class="h">Exploring protein–RNA recognition by investigating the TAR–Tat complex of immunodeficiency virus</span><span class="w">Jan 2021</span><span class="d">Flash talk · Statistical Mechanics in Chemistry and Biology (SMCB)</span></li>
+      <li><span class="h">Dynamically restricted water stabilizes TAR RNA–Tat peptide complex formation</span><span class="w">Mar 2020</span><span class="d">Poster · Chemical Science Conference, IISER Kolkata · Best Poster Award</span></li>
+    </ul>
+  </div>
+
+  <!-- ================= AWARDS ================= -->
+  <div class="view" id="v-awards">
+    <h2 class="page-title">Awards</h2>
+    <p class="page-sub">Fellowships, honors and contributions to research funding.</p>
+    <h2 class="sec" style="margin-top:0">Awards and fellowships</h2>
+    <ul class="rec">
+      <li><span class="h">Boston University RISE Mentor Fellowship ($1,750)</span><span class="w">2026</span></li>
+      <li><span class="h">Best Poster Award, Chemical Sciences Conference, IISER Kolkata</span><span class="w">2020</span></li>
+      <li><span class="h">DST–INSPIRE Scholarship (INR 400,000), Government of India</span><span class="w">2015 – 2020</span><span class="d">National scholarship for students in the top 1% in STEM.</span></li>
+      <li><span class="h">National-Level Certificate of Merit, Ministry of Education, Government of India</span><span class="w">2015</span><span class="d">Top 1% nationally in the Grade 12 examination.</span></li>
+    </ul>
+    <h2 class="sec">Grants and research funding</h2>
+    <ul class="rec">
+      <li><span class="h">NIH R21 research proposal</span><span class="w">2026</span><span class="d">Contributed extensively to the scientific development and writing of a proposal on membrane-protein regulation in intracellular membranes; developed computational aims, mechanistic hypotheses and sampling strategies (PI: Prof. John E. Straub).</span></li>
+      <li><span class="h">NSF ACCESS research allocation</span><span class="w">2026</span><span class="d">Contributed to a successful proposal securing about 3 million HPC service units (PI: Prof. Qiang Cui).</span></li>
+      <li><span class="h">Boston University UROP award</span><span class="w">2026</span><span class="d">Contributed to a successful $7,000 award supporting an undergraduate research project (PI: Prof. John E. Straub).</span></li>
+    </ul>
+  </div>
+
+  <!-- ================= EDUCATION ================= -->
+  <div class="view" id="v-education">
+    <h2 class="page-title">Education</h2>
+    <p class="page-sub">Training that spans chemistry, biology and physics.</p>
+    <div class="edu-card">
+      <h3>Boston University</h3><span class="w">2022 – present</span>
+      <span class="deg">Ph.D. Candidate, Theoretical and Computational Chemistry · expected 2027</span>
+      <p class="d">Advisors: Prof. Qiang Cui and Prof. John E. Straub. Dissertation research on membrane–protein coupling, lipid phase behavior and force-field development.</p>
+    </div>
+    <div class="edu-card">
+      <h3>Indian Institute of Science Education and Research Kolkata</h3><span class="w">2015 – 2020</span>
+      <span class="deg">BS–MS Dual Degree · Major: Chemical Sciences · Minor: Biological Sciences</span>
+      <p class="d">Master's thesis with Dr. Susmita Roy: "Exploring Protein–RNA Recognition Mechanism by Investigating TAR–TAT Complex of Immunodeficiency Virus." DST–INSPIRE scholar throughout.</p>
+    </div>
+  </div>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <div class="view" id="v-experience">
+    <h2 class="page-title">Experience</h2>
+    <p class="page-sub">Research positions, teaching and mentoring.</p>
+    <div class="xp">
+      <article class="xp-card">
+        <div class="xp-head"><h3>Doctoral Researcher</h3><span class="xp-when">Sep 2022 – present</span></div>
+        <p class="xp-org">Department of Chemistry, Boston University</p>
+        <p class="xp-adv">Advisors: Prof. Qiang Cui and Prof. John E. Straub</p>
+        <p class="xp-sum">Membrane–protein coupling and protein conformational dynamics using multiscale molecular dynamics, rare-event sampling and machine learning.</p>
+        <ul class="did">
+          <li>Quantified the thermodynamic competition between APP C99 dimerization and its partitioning into liquid-ordered and liquid-disordered membranes.</li>
+          <li>Characterized the kinetics and mechanism of phase separation in ternary lipid mixtures containing C99.</li>
+          <li>Showed, with experimental cell biologists, how bilayer thickness and transmembrane-domain dynamics drive directional ER–Golgi traffic through Erv14/cornichon.</li>
+          <li>Benchmarked polarizable (Drude) and nonpolarizable CHARMM force fields for flexible, highly charged proteins against NMR data.</li>
+          <li>Contributing to Martini coarse-grained force-field development with the Marrink and Souza groups.</li>
+          <li>Helped develop the computational aims of an NIH R21 proposal and secured about 3 million HPC service units through NSF ACCESS.</li>
+          <li>Mentored three undergraduate researchers and two high-school interns.</li>
+        </ul>
+        <div class="xp-foot">
+          <span class="lbl">Outputs</span>
+          <a href="#publications">[1] Sci. Adv. (under review)</a><a href="#publications">[2] J. Chem. Phys.</a><a href="#publications">[3] Biophys. J.</a><a href="#publications">[4] J. Chem. Inf. Model.</a><a href="#publications">[5] J. Chem. Theory Comput.</a><a href="#publications">[6] J. Chem. Inf. Model.</a><a href="#talks">Biophys. Soc. talk 2024</a><a href="#talks">Biophys. Soc. poster 2026</a>
+          <span class="gap"></span>
+          <span class="lbl">Tools</span>
+          <span class="tool">GROMACS</span><span class="tool">OpenMM</span><span class="tool">PLUMED</span><span class="tool">CHARMM / Drude</span><span class="tool">Martini</span><span class="tool">PyTorch</span>
+        </div>
+      </article>
+      <article class="xp-card">
+        <div class="xp-head"><h3>Junior Research Fellow</h3><span class="xp-when">Jan 2021 – Jan 2022</span></div>
+        <p class="xp-org">Tata Institute of Fundamental Research, Hyderabad</p>
+        <p class="xp-adv">Advisors: Prof. Surajit Sengupta and Dr. Jagannath Mondal</p>
+        <p class="xp-sum">Allosteric coupling during viral RNA–protein recognition.</p>
+        <ul class="did">
+          <li>Ran molecular dynamics simulations of a viral RNA–protein complex.</li>
+          <li>Applied non-affine fluctuation analysis, a tool from the physics of amorphous solids, to identify allosteric coupling during recognition.</li>
+          <li>Presented this work at Statistical Mechanics in Chemistry and Biology (SMCB 2021).</li>
+        </ul>
+        <div class="xp-foot">
+          <span class="lbl">Outputs</span><a href="#talks">SMCB flash talk 2021</a>
+          <span class="gap"></span>
+          <span class="lbl">Tools</span><span class="tool">Molecular dynamics</span><span class="tool">Non-affine analysis</span><span class="tool">Python</span>
+        </div>
+      </article>
+      <article class="xp-card">
+        <div class="xp-head"><h3>MS Thesis Researcher</h3><span class="xp-when">Sep 2019 – Dec 2020</span></div>
+        <p class="xp-org">Indian Institute of Science Education and Research Kolkata</p>
+        <p class="xp-adv">Advisor: Dr. Susmita Roy</p>
+        <p class="xp-sum">Fluctuation-driven recognition in the HIV TAR RNA–Tat peptide complex.</p>
+        <ul class="did">
+          <li>Used molecular dynamics, enhanced sampling and free-energy analysis to study how the Tat peptide recognizes TAR RNA.</li>
+          <li>Showed that correlated domain fluctuations navigate the peptide's target search along RNA.</li>
+          <li>Identified dynamically restricted water molecules that stabilize complex formation, recognized with a Best Poster Award.</li>
+          <li>Contributed to work on RNA conformational selection and entropic allostery in cascade protein binding.</li>
+        </ul>
+        <div class="xp-foot">
+          <span class="lbl">Outputs</span><a href="#publications">[7] J. Phys. Chem. Lett.</a><a href="#publications">[8] J. Phys. Chem. B</a><a href="#awards">Best Poster Award 2020</a>
+          <span class="gap"></span>
+          <span class="lbl">Tools</span><span class="tool">Enhanced sampling</span><span class="tool">Free-energy analysis</span><span class="tool">GROMACS</span>
+        </div>
+      </article>
+    </div>
+    <h2 class="sec">Teaching</h2>
+    <ul class="rec">
+      <li><span class="h">CH 351 Physical Chemistry I: Quantum Mechanics</span><span class="w">Spring 2024, 2026</span><span class="d">Boston University</span></li>
+      <li><span class="h">CH 352 Physical Chemistry II: Statistical Thermodynamics</span><span class="w">Fall 2025</span><span class="d">Boston University</span></li>
+      <li><span class="h">CH 658 Chemical Kinetics and Dynamics</span><span class="w">Spring 2025</span><span class="d">Boston University</span></li>
+      <li><span class="h">CH 101 General Chemistry I</span><span class="w">2022 – 2023</span><span class="d">Boston University</span></li>
+      <li><span class="h">CH 4205 Statistical Thermodynamics</span><span class="w">Spring 2020</span><span class="d">IISER Kolkata</span></li>
+      <li><span class="h">CS 2201 Scientific Computing in Python</span><span class="w">Spring 2020</span><span class="d">IISER Kolkata</span></li>
+    </ul>
+    <h2 class="sec">Mentoring</h2>
+    <ul class="rec">
+      <li><span class="h">Undergraduate research mentor, three students</span><span class="w">2025 – present</span><span class="d">Boston University</span></li>
+      <li><span class="h">Research mentor, two high-school interns</span><span class="w">Summer 2026</span><span class="d">BU RISE Internship Program, supported by a RISE Mentor Fellowship</span></li>
+    </ul>
+  </div>
+
+  <!-- ================= SERVICE ================= -->
+  <div class="view" id="v-service">
+    <h2 class="page-title">Service</h2>
+    <p class="page-sub">Peer review and building a scientific community across theory and experiment.</p>
+    <h2 class="sec" style="margin-top:0">Peer review</h2>
+    <ul class="rec">
+      <li><span class="h">Reviewer, The Journal of Chemical Physics</span><span class="w">AIP Publishing</span></li>
+      <li><span class="h">Reviewer, Biophysical Journal</span><span class="w">Cell Press</span></li>
+    </ul>
+    <h2 class="sec">Scientific community</h2>
+    <ul class="rec">
+      <li><span class="h">Host, Greater Boston Area TheoChem Seminar Series</span><span class="w">Boston University</span><span class="d">Brings theoretical chemists from across the Boston area together for research seminars.</span></li>
+      <li><span class="h">Co-organizer, Theory Weekly Tea</span><span class="w">2023 – 2024</span><span class="d">Informal scientific discussions and networking among experimental, theoretical and computational researchers.</span></li>
+    </ul>
+    <h2 class="sec">Outreach and mentoring</h2>
+    <ul class="rec">
+      <li><span class="h">BU RISE Internship Program, research mentor</span><span class="w">Summer 2026</span><span class="d">Guided two high-school interns through their first computational research projects.</span></li>
+      <li><span class="h">Undergraduate research mentoring</span><span class="w">2025 – present</span><span class="d">Mentoring three undergraduates, including a project supported by a BU UROP award.</span></li>
+    </ul>
+  </div>
+
+  <!-- ================= SKILLS ================= -->
+  <div class="view" id="v-skills">
+    <h2 class="page-title">Skills</h2>
+    <p class="page-sub">Scientific methods, software and professional skills.</p>
+    <div class="skill-groups">
+      <div><h3>Scientific methods</h3><div class="chips"><span>Rare-event sampling</span><span>Free-energy methods</span><span>Force-field development</span><span>Polarizable models</span><span>Coarse-grained MD (Martini)</span><span>Phase-separation kinetics</span><span>Non-affine fluctuation analysis</span></div></div>
+      <div><h3>Software and programming</h3><div class="chips"><span>GROMACS</span><span>OpenMM</span><span>PLUMED</span><span>Gaussian</span><span>Python</span><span>PyTorch</span><span>MATLAB</span><span>Fortran</span><span>Bash</span></div></div>
+      <div><h3>Communication and leadership</h3><div class="chips"><span>Grant writing</span><span>Peer review</span><span>Research mentoring</span><span>Teaching</span><span>Seminar organization</span><span>VMD</span><span>PyMOL</span><span>Adobe Illustrator</span><span>LaTeX</span></div></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-nav-row">
+      <span style="color:var(--band-ink)">Sangram Prusty</span>
+      <span>Ph.D. Candidate · Boston University · Boston · © 2026</span>
+    </div>
+    <nav aria-label="Footer">
+      <a href="#home">Home</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#talks">Talks</a><a href="#awards">Awards</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#service">Service</a><a href="#skills">Skills</a>
+    </nav>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* =====================================================================
+   YOUR LINKS: paste each address between the quotes.
+   Every icon is always shown; until you add an address it does nothing.
+   Put photo.jpg and cv.pdf in the same folder as this file.
+   ===================================================================== */
+const LINKS = {
+  scholar:      "",   // e.g. "https://scholar.google.com/citations?user=XXXX"
+  github:       "https://github.com/Sangram-biophy",
+  linkedin:     "",   // e.g. "https://www.linkedin.com/in/yourname"
+  orcid:        "",   // e.g. "https://orcid.org/0000-0000-0000-0000"
+  researchgate: "",   // e.g. "https://www.researchgate.net/profile/Your-Name"
+  cv:           "cv.pdf"
+};
+document.querySelectorAll("[data-link]").forEach(a => {
+  const url = LINKS[a.dataset.link];
+  if (url) { a.href = url; if (/^https?:/.test(url)) { a.target = "_blank"; a.rel = "noopener"; } }
+  else a.addEventListener("click", e => e.preventDefault()); // placeholder until a link is added
+});
+
+const root = document.documentElement;
+const css = n => getComputedStyle(root).getPropertyValue(n).trim();
+const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- Theme toggle ---------- */
+document.getElementById("themeBtn").addEventListener("click", () => {
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+});
+
+/* ---------- Pages: the address #name decides which page shows ---------- */
+const pages = ["home", "research", "publications", "talks", "awards", "education", "experience", "service", "skills"];
+let pendingScroll = null;
+function route() {
+  const name = location.hash.slice(1);
+  const page = pages.includes(name) ? name : "home";
+  pages.forEach(p => document.getElementById("v-" + p).classList.toggle("on", p === page));
+  document.querySelectorAll("nav.main a").forEach(a => {
+    if (a.getAttribute("href") === "#" + page) a.setAttribute("aria-current", "page");
+    else a.removeAttribute("aria-current");
+  });
+  if (pendingScroll) { document.getElementById(pendingScroll).scrollIntoView({ behavior: still ? "auto" : "smooth" }); pendingScroll = null; }
+  else window.scrollTo({ top: 0 });
+  if (page === "home") countUp();
+}
+addEventListener("hashchange", route);
+// research cards on Home jump to their theme on the Research page
+document.querySelectorAll(".r-card").forEach(c => c.addEventListener("click", () => { pendingScroll = c.dataset.theme; }));
+
+/* ---------- Rotating "currently working on" line ---------- */
+const topics = ["membrane–protein coupling", "lipid phase separation", "rare-event sampling", "polarizable force fields", "machine learning for simulation"];
+let ti = 0;
+const nowEl = document.getElementById("now");
+if (!still) setInterval(() => {
+  nowEl.classList.add("out");
+  setTimeout(() => { ti = (ti + 1) % topics.length; nowEl.textContent = topics[ti]; nowEl.classList.remove("out"); }, 350);
+}, 2800);
+
+/* ---------- Count-up numbers ---------- */
+function countUp() {
+  if (still) return;
+  document.querySelectorAll("#stats .num").forEach(el => {
+    const to = +el.dataset.to, t0 = performance.now();
+    const step = t => {
+      const f = Math.min(1, (t - t0) / 900);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - f, 3)));
+      if (f < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+}
+
+/* ---------- Publications: add a new paper here ---------- */
+const pubs = [
+  { n: 1, year: 2026, first: true, topic: "membranes", status: "Under review",
+    authors: "Prusty, S.†, Li, X.†, Loyer, N., Ochoa, M. D. P., Riley, N., Smith, E., Januschke, J., Cui, Q.*, and Miller, E. A.*",
+    title: "Bilayer thickness and transmembrane domain dynamics drive directional ER–Golgi traffic via Erv14/cornichon",
+    venue: "Science Advances", detail: "" },
+  { n: 2, year: 2026, first: true, topic: "membranes",
+    authors: "Prusty, S., Majumder, A., and Straub, J. E.*",
+    title: "Exploring the thermodynamic competition between APP C99 dimerization and membrane partitioning in model liquid-ordered and disordered membranes",
+    venue: "Journal of Chemical Physics", detail: "165, 124107" },
+  { n: 3, year: 2026, first: true, topic: "forcefields",
+    authors: "Prusty, S. and Cui, Q.*",
+    title: "New and notable: Polarizing phosphorylated proteins",
+    venue: "Biophysical Journal", detail: "125, 1–3" },
+  { n: 4, year: 2025, first: true, topic: "forcefields",
+    authors: "Prusty, S., Brüschweiler, R., and Cui, Q.*",
+    title: "Comparative analysis of polarizable and nonpolarizable CHARMM family force fields for proteins with flexible loops and high charge density",
+    venue: "Journal of Chemical Information and Modeling", detail: "65(15), 8304–8321" },
+  { n: 5, year: 2025, first: true, topic: "membranes",
+    authors: "Prusty, S.†, Pantelopulos, G. P.†, Bandara, A., and Straub, J. E.*",
+    title: "Kinetics and mechanism of phase separation in ternary lipid mixtures containing APP C99",
+    venue: "Journal of Chemical Theory and Computation", detail: "21(10), 5291–5303" },
+  { n: 6, year: 2025, first: false, topic: "other",
+    authors: "Mastracco, P.†, Mohanam, L. N.†, Nagaro, G.†, Prusty, S., Oh, Y., Wu, R., Cui, Q., Hochbaum, A. I., Copp, S. M.*, and Sharifzadeh, S.*",
+    title: "Dynamic electronic structure fluctuations in the de novo peptide ACC-dimer revealed by first-principles theory and machine learning",
+    venue: "Journal of Chemical Information and Modeling", detail: "65, 2503–2512" },
+  { n: 7, year: 2024, first: false, topic: "rna",
+    authors: "Chakraborty, A., Samant, D., Sarkar, R., Sangeet, S., Prusty, S., and Roy, S.*",
+    title: "RNA's dynamic conformational selection and entropic allosteric mechanism in controlling cascade protein binding events",
+    venue: "The Journal of Physical Chemistry Letters", detail: "15(23), 6115–6125" },
+  { n: 8, year: 2021, first: true, topic: "rna",
+    authors: "Prusty, S., Sarkar, R., Chakraborty, A., and Roy, S.*",
+    title: "Correlation in domain fluctuations navigates target search of a viral peptide along RNA",
+    venue: "The Journal of Physical Chemistry B", detail: "125(46), 12678–12689" }
+];
+const topicName = { membranes: "Membranes", forcefields: "Force fields", rna: "RNA–protein", other: "Electronic structure" };
+
+function pubHTML(p) {
+  return `<div class="pub">
+    <span class="n">[${p.n}]</span>
+    <div>
+      <div class="t">${p.title}</div>
+      <div class="a">${p.authors.replace("Prusty, S.", "<b>Prusty, S.</b>")}</div>
+      <div class="v">${p.venue}${p.detail ? ", " + p.detail : ""} (${p.year})</div>
+      <div class="row">
+        ${p.status ? `<span class="tag rev">${p.status}</span>` : ""}
+        ${p.first ? `<span class="tag">First author</span>` : ""}
+        <span class="tag">${topicName[p.topic]}</span>
+        <button class="cite-btn" type="button" data-n="${p.n}">Copy citation</button>
+      </div>
+    </div>
+  </div>`;
+}
+let filter = "all", query = "";
+function renderPubs() {
+  const q = query.toLowerCase();
+  const list = pubs.filter(p => (filter === "all" || (filter === "first" ? p.first : p.topic === filter))
+    && (!q || (p.title + p.authors + p.venue).toLowerCase().includes(q)));
+  document.getElementById("pubCount").textContent = `${list.length} of ${pubs.length} shown`;
+  let html = "", lastYear = null;
+  list.forEach(p => { if (p.year !== lastYear) { html += `<div class="yr-head">${p.year}</div>`; lastYear = p.year; } html += pubHTML(p); });
+  document.getElementById("pubList").innerHTML = html || `<p class="empty">No papers match. Try another word or filter.</p>`;
+}
+document.querySelectorAll("#v-publications .chips button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll("#v-publications .chips button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  filter = b.dataset.f; renderPubs();
+}));
+document.getElementById("pubSearch").addEventListener("input", e => { query = e.target.value; renderPubs(); });
+// Home: latest (published) grouped by year, and upcoming (under review)
+(function homePubs() {
+  let html = "", last = null;
+  pubs.filter(p => !p.status).slice(0, 5).forEach(p => {
+    if (p.year !== last) { html += `<div class="yr-head">${p.year}</div>`; last = p.year; }
+    html += pubHTML(p);
+  });
+  document.getElementById("latestPubs").innerHTML = html;
+  document.getElementById("upcomingPubs").innerHTML = pubs.filter(p => p.status)
+    .map(p => `<div class="yr-head">${p.year} <span class="up-tag">${p.status}</span></div>` + pubHTML(p)).join("");
+})();
+renderPubs();
+
+// copy a citation to the clipboard
+const toast = document.getElementById("toast");
+function say(msg) { toast.textContent = msg; toast.classList.add("show"); setTimeout(() => toast.classList.remove("show"), 1800); }
+document.addEventListener("click", async e => {
+  const b = e.target.closest(".cite-btn"); if (!b) return;
+  const p = pubs.find(x => x.n === +b.dataset.n);
+  const text = `${p.authors.replace(/[†*]/g, "")} (${p.year}). ${p.title}. ${p.venue}${p.detail ? ", " + p.detail : ""}.`;
+  try { await navigator.clipboard.writeText(text); say("Citation copied"); }
+  catch { say("Copy is blocked here. Select the text instead."); }
+});
+
+/* ---------- Discipline map on Home ---------- */
+(function disciplineMap() {
+  const fields = [
+    { short: ["Membrane", "biophysics"], title: "Membrane biophysics",
+      text: "How bilayer thickness, lipid order and phase separation shape membrane proteins such as APP C99.",
+      with: "Straub and Cui groups", papers: [1, 2, 5] },
+    { short: ["Cell", "biology"], title: "Cell biology",
+      text: "Membrane thickness as a physical sorting signal in ER–Golgi traffic, tested with experiment.",
+      with: "Miller and Januschke groups", papers: [1] },
+    { short: ["Force-field", "development"], title: "Force-field development",
+      text: "Polarizable all-atom models validated against NMR, and coarse-grained Martini models.",
+      with: "Brüschweiler group; Marrink, Souza and coworkers", papers: [3, 4] },
+    { short: ["Machine", "learning"], title: "Machine learning",
+      text: "Machine learning combined with first-principles theory and molecular simulation.",
+      with: "Copp, Sharifzadeh and Hochbaum groups", papers: [6] },
+    { short: ["RNA–protein", "recognition"], title: "RNA–protein recognition",
+      text: "How correlated fluctuations and allostery guide viral proteins to their RNA targets.",
+      with: "Roy group; Sengupta and Mondal groups", papers: [7, 8] }
+  ];
+  const svg = document.getElementById("discMap"), NS = "http://www.w3.org/2000/svg";
+  const cx = 280, cy = 205, rx = 190, ry = 150;
+  const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); (parent || svg).appendChild(e); return e; };
+  const defs = el("defs", {});
+  const g = el("radialGradient", { id: "hubGrad", cx: "35%", cy: "30%", r: "80%" }, defs);
+  el("stop", { offset: "0%", style: "stop-color: var(--p-accent)" }, g); el("stop", { offset: "100%", style: "stop-color: var(--p-band)" }, g);
+  const edges = [], nodes = [];
+  const pos = fields.map((f, i) => {
+    const a = -Math.PI / 2 + i * 2 * Math.PI / fields.length;
+    return [cx + rx * Math.cos(a), cy + ry * Math.sin(a)];
+  });
+  pos.forEach(([x, y]) => edges.push(el("line", { x1: cx, y1: cy, x2: x, y2: y, class: "edge" })));
+  const hub = el("g", { class: "hub" });
+  el("circle", { cx, cy, r: 62 }, hub);
+  [["Statistical", -14], ["mechanics and", 4], ["simulation", 22]].forEach(([t, dy]) => { const tx = el("text", { x: cx, y: cy + dy }, hub); tx.textContent = t; });
+  fields.forEach((f, i) => {
+    const [x, y] = pos[i];
+    const n = el("g", { class: "node", tabindex: "0", role: "button", "aria-label": f.title });
+    el("circle", { cx: x, cy: y, r: 52 }, n);
+    const ic = el("text", { x, y: y - 16, class: "ic" }, n); ic.textContent = String(i + 1).padStart(2, "0");
+    f.short.forEach((t, k) => { const tx = el("text", { x, y: y + 2 + k * 15 }, n); tx.textContent = t; });
+    n.addEventListener("click", () => pick(i));
+    n.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(i); } });
+    n.addEventListener("mouseenter", () => pick(i));
+    nodes.push(n);
+  });
+  function pick(i) {
+    const f = fields[i];
+    nodes.forEach((n, k) => n.classList.toggle("on", k === i));
+    edges.forEach((e, k) => e.classList.toggle("on", k === i));
+    document.getElementById("dpKey").textContent = `${String(i + 1).padStart(2, "0")} / ${String(fields.length).padStart(2, "0")}`;
+    document.getElementById("dpTitle").textContent = f.title;
+    document.getElementById("dpText").textContent = f.text;
+    document.getElementById("dpWith").innerHTML = `<b>With:</b> ${f.with}`;
+    document.getElementById("dpPapers").innerHTML = f.papers.map(n => {
+      const p = pubs.find(x => x.n === n);
+      const abbr = { "Science Advances": "Sci. Adv.", "Journal of Chemical Physics": "J. Chem. Phys.", "Biophysical Journal": "Biophys. J.",
+        "Journal of Chemical Information and Modeling": "J. Chem. Inf. Model.", "Journal of Chemical Theory and Computation": "J. Chem. Theory Comput.",
+        "The Journal of Physical Chemistry Letters": "J. Phys. Chem. Lett.", "The Journal of Physical Chemistry B": "J. Phys. Chem. B" };
+      return `<a href="#publications" title="${p.title}">[${n}] ${abbr[p.venue] || p.venue} ${p.year}</a>`;
+    }).join("");
+  }
+  pick(0);
+})();
+
+
+
+/* ---------- Header membrane: a smooth, looping story in side view ----------
+   0–4 s    mixed bilayer, saturated : unsaturated : cholesterol = 35 : 35 : 30
+   4–11 s   nanodomains form (local clustering)
+   11–19 s  full Lo/Ld phase separation; Lo is thicker
+   19–27 s  in Ld the two helices exchange between monomers and a dimer
+   27–32 s  the dimer moves into Lo; its tilt falls as the bilayer thickens
+   32–37 s  in Lo it stays a dimer; then the loop fades and restarts
+   Every lipid follows an eased path between three arrangements, so motion is smooth. */
+(function membraneStory() {
+  const cv = document.getElementById("membrane"), ctx = cv.getContext("2d");
+  const SAT = 0, UNS = 1, CHOL = 2, WID = [10, 12, 6], LH = 52, LOOP = 38.4;
+  const ease = u => { u = Math.min(1, Math.max(0, u)); return u * u * u * (u * (6 * u - 15) + 10); }; // smootherstep
+  const lerp = (a, b, u) => a + (b - a) * u;
+  let lip = [], w = 0, t0 = 0, tilts = [0.5, 0.5];
+
+  function place(order) { // x centres for an ordering of lipids, scaled to the width
+    const tot = order.reduce((s, o) => s + WID[o.type], 0), k = (w - 8) / tot; let c = 4;
+    const xs = new Map(); order.forEach(o => { xs.set(o, c + WID[o.type] * k / 2); c += WID[o.type] * k; }); return xs;
+  }
+  function build() {
+    w = cv.clientWidth;
+    const n = Math.max(40, Math.floor((w - 30) / 9.6));
+    lip = [];
+    for (let i = 0; i < n; i++) lip.push({ type: i < n * 0.35 ? SAT : i < n * 0.70 ? UNS : CHOL, ph: Math.random() * 6.28 });
+    lip.forEach(o => { o.lo = o.type === SAT || (o.type === CHOL && Math.random() < 0.8); }); // 80% of cholesterol ends in Lo
+    // A: random mixture
+    const A = lip.slice(); for (let i = A.length - 1; i > 0; i--) { const j = (Math.random() * (i + 1)) | 0; [A[i], A[j]] = [A[j], A[i]]; }
+    // B: nanodomains, lipids cluster locally inside windows of about ten
+    const B = [];
+    for (let i = 0, win = 0; i < A.length; i += 10, win++) {
+      const part = A.slice(i, i + 10), lo = part.filter(o => o.lo), ld = part.filter(o => !o.lo);
+      B.push(...(win % 2 ? lo.concat(ld) : ld.concat(lo)));
+    }
+    // C: full separation Ld | Lo | Ld, keeping each class in its nanodomain order
+    const lds = B.filter(o => !o.lo), los = B.filter(o => o.lo), cut = Math.round(lds.length * 0.5);
+    const C = lds.slice(0, cut).concat(los, lds.slice(cut));
+    const xa = place(A), xb = place(B), xc = place(C);
+    lip.forEach(o => { o.xa = xa.get(o); o.xb = xb.get(o); o.xc = xc.get(o); });
+    const loXs = los.map(o => o.xc); lip.loMid = (Math.min(...loXs) + Math.max(...loXs)) / 2;
+  }
+  function helices(t) { // helix centres and whether they form a dimer
+    const c = 0.135 * w, wob = k => 6 * Math.sin(t * 0.45 + k);
+    if (t < 19) return { xs: [c - 30 + wob(0), c + 30 + wob(2)], dimer: false };
+    if (t < 27) { // monomer ⇄ dimer exchange: apart, together, apart, together
+      const u = (t - 19) / 8, d = 15 + 45 * (0.5 + 0.5 * Math.cos(Math.PI * 3 * ease(u)));
+      return { xs: [c - d / 2, c + d / 2], dimer: d < 17 };
+    }
+    const m = lerp(c, lip.loMid, ease((t - 27) / 5)) + (t > 32 ? 4 * Math.sin((t - 32) * 0.6) : 0);
+    return { xs: [m - 7.5, m + 7.5], dimer: true };
+  }
+  function draw(now, t) {
+    const dpr = devicePixelRatio || 1, h = cv.clientHeight;
+    if (cv.clientWidth !== w || !lip.length) build();
+    if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+    const accent = css("--accent"), accent2 = css("--accent-2"), muted = css("--muted"), soft = css("--accent-soft");
+    const mid = h * 0.54, s1 = ease((t - 4) / 7), s2 = ease((t - 11) / 8);
+    const H = helices(t);
+    const und = x => 1.2 * Math.sin(x * 0.006 + now * 0.0004);
+    // lipid positions: eased path A → B → C, slow thermal sway, and room made around helices
+    const xs = lip.map(o => {
+      let x = lerp(lerp(o.xa, o.xb, s1), o.xc, s2) + 1.1 * Math.sin(now * 0.0009 + o.ph);
+      H.xs.forEach(hx => { const d = x - hx; x += 12 * Math.tanh(d / 5) * Math.exp(-((d / 34) ** 2)); });
+      return x;
+    });
+    // local order → bilayer thickness (Gaussian average of Lo-forming lipids, σ = 18 px)
+    const val = lip.map(o => o.type === SAT ? 1 : o.type === CHOL ? 0.8 : 0);
+    const ordAt = x => { let s = 0, z = 0; xs.forEach((xx, j) => { const g = Math.exp(-(((xx - x) / 18) ** 2)); s += g * val[j]; z += g; }); return z ? s / z : 0.5; };
+    const halfAt = x => 17 + 9 * Math.min(1, Math.max(0, (ordAt(x) - 0.4) / 0.5));
+    const halves = xs.map(halfAt);
+    const fade = Math.min(1, t / 1.2, (LOOP - t) / 1.2);
+    for (let leaf = 0; leaf < 2; leaf++) {
+      const sgn = leaf ? 1 : -1;
+      lip.forEach((o, i) => {
+        const x = xs[i], hl = halves[i], y0 = mid + und(x) + sgn * hl, yEnd = mid + und(x) + sgn * 2;
+        if (o.type === CHOL) {
+          ctx.fillStyle = muted; ctx.globalAlpha = 0.6 * fade;
+          const a = y0 - sgn * 2, b = y0 - sgn * Math.min(hl - 4, 15);
+          ctx.beginPath(); ctx.roundRect(x - 1.8, Math.min(a, b), 3.6, Math.abs(b - a), 1.8); ctx.fill();
+          ctx.globalAlpha = 0.9 * fade; ctx.beginPath(); ctx.arc(x, y0 + sgn, 1.8, 0, Math.PI * 2); ctx.fill();
+          return;
+        }
+        ctx.strokeStyle = muted; ctx.globalAlpha = 0.45 * fade; ctx.lineWidth = 1;
+        for (const off of [-1.8, 1.8]) {
+          ctx.beginPath(); ctx.moveTo(x + off, y0 - sgn * 4);
+          if (o.type === SAT) ctx.lineTo(x + off * 0.7, yEnd);
+          else {
+            const ky = y0 - sgn * 4 + (yEnd - y0) * 0.45, kick = (off > 0 ? 1 : -1) * (2.2 + 0.5 * Math.sin(now * 0.0012 + o.ph));
+            ctx.lineTo(x + off, ky); ctx.lineTo(x + off + kick, yEnd);
+          }
+          ctx.stroke();
+        }
+        ctx.globalAlpha = 0.95 * fade; ctx.fillStyle = o.type === SAT ? accent2 : accent;
+        ctx.beginPath(); ctx.arc(x, y0, 3.4, 0, Math.PI * 2); ctx.fill();
+      });
+    }
+    // helices: cos(tilt) = hydrophobic thickness / helix length, eased toward its target
+    H.xs.forEach((hx, k) => {
+      const target = Math.acos(Math.min(1, (2 * halfAt(hx) + 8) / LH));
+      tilts[k] += (target - tilts[k]) * 0.04;
+      ctx.save(); ctx.globalAlpha = fade;
+      ctx.translate(hx, mid + und(hx)); ctx.rotate(tilts[k] * (H.dimer && k ? 0.88 : 1));
+      const R = 6.5;
+      ctx.fillStyle = soft; ctx.strokeStyle = accent; ctx.lineWidth = 1.4;
+      ctx.beginPath(); ctx.roundRect(-R, -LH / 2, 2 * R, LH, R); ctx.fill(); ctx.stroke();
+      ctx.beginPath();
+      for (let s = 0; s <= 1.0001; s += 0.02) { const y = -LH / 2 + 5 + s * (LH - 10), xx = R * 0.72 * Math.sin(s * 2 * Math.PI * 4); s === 0 ? ctx.moveTo(xx, y) : ctx.lineTo(xx, y); }
+      ctx.stroke(); ctx.restore();
+    });
+    ctx.globalAlpha = 1;
+  }
+  function loop(now) {
+    if (!t0) t0 = now;
+    let t = (now - t0) / 1000;
+    if (t > LOOP) { t0 = now; t = 0; build(); tilts = [0.5, 0.5]; }
+    draw(now, t);
+    requestAnimationFrame(loop);
+  }
+  if (still) { // reduced motion: the final scene, dimer upright in Lo
+    build(); tilts = [0, 0];
+    const show = () => draw(0, 34); show();
+    addEventListener("resize", show);
+    new MutationObserver(show).observe(root, { attributes: true });
+  } else requestAnimationFrame(loop);
+})();
+
+
+
+route();
+</script>
+</body>
+</html>
