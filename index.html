@@ -4,10 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sangram Prusty · Theoretical and Computational Chemistry</title>
-<meta name="description" content="Sangram Prusty is a theoretical and computational chemist at Boston University working across statistical mechanics, membrane biophysics, cell biology and machine learning for molecular simulation.">
+<!-- <meta name="description" content="Sangram Prusty is a theoretical and computational chemist at Boston University working across statistical mechanics, membrane biophysics, cell biology and machine learning for molecular simulation."> -->
+<meta name="description" content="Sangram Prusty is a Ph.D. candidate in Theoretical and Computational Chemistry at Boston University. His research combines statistical mechanics and molecular simulations to uncover how complex molecular environments regulate biomolecular interactions, dynamics, and function, providing molecular insights into biological processes relevant to diseases such as Alzheimer's.">
 <link rel="canonical" href="https://sangram-biophy.github.io/">
 <meta property="og:title" content="Sangram Prusty · Theoretical and Computational Chemistry">
-<meta property="og:description" content="Theoretical and computational chemist at Boston University working on membrane biophysics, force fields and machine learning for molecular simulation.">
+<!-- <meta property="og:description" content="Theoretical and computational chemist at Boston University working on membrane biophysics, force fields and machine learning for molecular simulation."> -->
+<meta property="og:description" content="Sangram Prusty is a Ph.D. candidate at Boston University using statistical mechanics and molecular simulations to understand how complex molecular environments shape biomolecular interactions and cellular function, advancing molecular insights into processes implicated in Alzheimer's disease.">
 <meta property="og:url" content="https://sangram-biophy.github.io/">
 <meta property="og:type" content="profile">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,9 +25,11 @@
   "url": "https://sangram-biophy.github.io/",
   "jobTitle": "Ph.D. Candidate in Theoretical and Computational Chemistry",
   "affiliation": { "@type": "CollegeOrUniversity", "name": "Boston University" },
+  "description": "Sangram Prusty is a theoretical and computational chemist investigating how heterogeneous molecular environments influence biomolecular interactions, dynamics, and biological function. His research combines statistical mechanics, multiscale molecular simulations, enhanced sampling, and experimental insights to study membrane-protein coupling, membrane phase separation, and protein association relevant to Alzheimer's disease. His broader interests include developing predictive models of biomolecular processes using machine learning.",
+,
   "alumniOf": [
-    { "@type": "CollegeOrUniversity", "name": "Indian Institute of Science Education and Research Kolkata" },
-    { "@type": "ResearchOrganization", "name": "Tata Institute of Fundamental Research, Hyderabad" }
+    { "@type": "CollegeOrUniversity", "name": "Indian Institute of Science Education and Research, Kolkata, India" },
+    
   ],
   "email": "mailto:prustysp@bu.edu",
   "sameAs": ["https://github.com/Sangram-biophy"],
@@ -359,11 +363,20 @@ footer nav a:hover { color: var(--p-glow2); }
 @media (max-width: 820px) { .scales { grid-template-columns: 1fr; } .scale { border-right: 0; border-bottom: 1px solid var(--line); } .scale::after { display: none; } }
 
 /* Collaborations */
-.collabs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+/* .collabs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.collab { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); }
+.collab .f { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: .07em; text-transform: uppercase; color: var(--accent); }
+.collab h4 { font-family: var(--font-display); font-weight: 500; font-size: 1.1rem; margin: 6px 0; }
+.collab p { margin: 0; font-size: 0.88rem; color: var(--muted); } */
+.collabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .collab { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); }
 .collab .f { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: .07em; text-transform: uppercase; color: var(--accent); }
 .collab h4 { font-family: var(--font-display); font-weight: 500; font-size: 1.1rem; margin: 6px 0; }
 .collab p { margin: 0; font-size: 0.88rem; color: var(--muted); }
+.collab h4 a { color: var(--ink); text-decoration: none; }
+.collab h4 a:hover { color: var(--accent); text-decoration: underline; }
+.collab h4 a::after { content: " ↗"; font-size: 0.75em; color: var(--accent); }
+.collab .inst { margin: 0 0 6px; font-size: 0.82rem; color: var(--accent-2); font-weight: 500; }
 @media (max-width: 820px) { .collabs { grid-template-columns: 1fr; } }
 
 .vision { background: linear-gradient(140deg, var(--band-2), var(--band)); color: var(--band-ink); border-radius: 16px; padding: 30px 32px; margin-top: 40px; position: relative; overflow: hidden; }
@@ -477,44 +490,44 @@ ul.did li::before { content: ""; position: absolute; left: 4px; top: 9px; width:
 </head>
 <body>
 
-<header class="site">
-  <div class="wrap">
-    <div class="id-row">
-      <div class="photo"><span aria-hidden="true">SP</span><img src="photo.jpg" alt="Portrait of Sangram Prusty" onerror="this.remove()"></div>
-      <div class="id-text">
-        <p class="hero-aff">Boston University · Department of Chemistry · Boston, MA</p>
-        <h1>Sangram Prusty</h1>
-        <p class="title">Ph.D. Candidate, Theoretical and Computational Chemistry</p>
-        <p class="aff">Statistical mechanics · Membrane biophysics · Machine learning for molecular simulation</p>
-        <p class="now">Currently working on <b id="now">membrane–protein coupling</b></p>
-        <div class="icons">
-          <a class="ico" href="#" data-link="scholar" aria-label="Google Scholar" data-tip="Google Scholar"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg></a>
-          <a class="ico" href="#" data-link="github" aria-label="GitHub" data-tip="GitHub"><svg viewBox="0 0 496 512" aria-hidden="true"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
-          <a class="ico" href="#" data-link="linkedin" aria-label="LinkedIn" data-tip="LinkedIn"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
-          <a class="ico" href="#" data-link="orcid" aria-label="ORCID" data-tip="ORCID"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z"/></svg></a>
-          <a class="ico" href="#" data-link="researchgate" aria-label="ResearchGate" data-tip="ResearchGate"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"/></svg></a>
-          <a class="ico" href="mailto:prustysp@bu.edu" aria-label="Email prustysp@bu.edu" data-tip="Email"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
-          <a class="ico" href="#" data-link="cv" aria-label="Download CV" data-tip="CV (PDF)"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></a>
-          <span class="sep" aria-hidden="true"></span>
-          <button class="ico theme-btn" id="themeBtn" type="button" aria-label="Switch light or dark mode" data-tip="Light / dark"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg></button>
+  <header class="site">
+    <div class="wrap">
+      <div class="id-row">
+        <div class="photo"><span aria-hidden="true">SP</span><img src="photo.jpg" alt="Portrait of Sangram Prusty" onerror="this.remove()"></div>
+        <div class="id-text">
+          <p class="hero-aff">Boston University · Department of Chemistry · Boston, MA</p>
+          <h1>Sangram Prusty</h1>
+          <p class="title">Ph.D. Candidate, Theoretical and Computational Chemistry</p>
+          <p class="aff">Statistical mechanics · Membrane biophysics · Machine learning for molecular simulation</p>
+          <p class="now">Currently working on <b id="now">membrane–protein coupling</b></p>
+          <div class="icons">
+            <a class="ico" href="https://scholar.google.com/citations?user=vZd6dToAAAAJ&hl=en" data-link="https://scholar.google.com/citations?user=vZd6dToAAAAJ&hl=en" aria-label="Google Scholar" data-tip="Google Scholar"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg></a>
+            <a class="ico" href="https://github.com/Sangram-biophy" data-link="https://github.com/Sangram-biophy" aria-label="GitHub" data-tip="GitHub"><svg viewBox="0 0 496 512" aria-hidden="true"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+            <a class="ico" href="https://www.linkedin.com/in/sangrambiophy/" data-link="https://www.linkedin.com/in/sangrambiophy/" aria-label="LinkedIn" data-tip="LinkedIn"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+            <a class="ico" href="https://orcid.org/my-orcid?orcid=0000-0003-3582-1792" data-link="https://orcid.org/my-orcid?orcid=0000-0003-3582-1792" aria-label="ORCID" data-tip="ORCID"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z"/></svg></a>
+            <a class="ico" href="https://www.researchgate.net/profile/Sangram-Prusty?ev=hdr_xprf" data-link="https://www.researchgate.net/profile/Sangram-Prusty?ev=hdr_xprf" aria-label="ResearchGate" data-tip="ResearchGate"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"/></svg></a>
+            <a class="ico" href="mailto:prustysp@bu.edu" aria-label="Email prustysp@bu.edu" data-tip="Email"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
+            <a class="ico" href="#" data-link="cv" aria-label="Download CV" data-tip="CV (PDF)"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></a>
+            <span class="sep" aria-hidden="true"></span>
+            <button class="ico theme-btn" id="themeBtn" type="button" aria-label="Switch light or dark mode" data-tip="Light / dark"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg></button>
+          </div>
+          <p class="seeking-pill"><span></span>Ph.D. expected Summer 2027</p>
         </div>
-        <p class="seeking-pill"><span></span>Ph.D. expected 2027 · open to postdoctoral opportunities</p>
       </div>
+      <nav class="main" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#awards">Awards</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#service">Service</a>
+        <a href="#skills">Skills</a>
+      </nav>
     </div>
-    <nav class="main" aria-label="Main">
-      <a href="#home">Home</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#talks">Talks</a>
-      <a href="#awards">Awards</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#service">Service</a>
-      <a href="#skills">Skills</a>
-    </nav>
-  </div>
-  <canvas id="membrane" class="membrane-strip" role="img" aria-label="Animated side view of a lipid bilayer of saturated lipid, unsaturated lipid and cholesterol that separates into ordered and disordered domains, while two transmembrane helices form a dimer that moves into the ordered domain and becomes more upright"></canvas>
-</header>
+    <canvas id="membrane" class="membrane-strip" role="img" aria-label="Animated side view of a lipid bilayer of saturated lipid, unsaturated lipid and cholesterol that separates into ordered and disordered domains, while two transmembrane helices form a dimer that moves into the ordered domain and becomes more upright"></canvas>
+  </header>
 
 <main class="wrap">
 
@@ -522,16 +535,66 @@ ul.did li::before { content: ""; position: absolute; left: 4px; top: 9px; width:
   <div class="view" id="v-home">
     <div class="home-grid">
       <div class="about">
-        <p><b>Sangram Prusty</b> is a theoretical and computational chemist working at the interface of <b>statistical mechanics</b>, <b>membrane biophysics</b> and <b>cell biology</b>. A Ph.D. candidate at <b>Boston University</b> with <b>Prof. Qiang Cui</b> and <b>Prof. John E. Straub</b>, he builds multiscale models, from polarizable all-atom force fields to coarse-grained Martini membranes, to explain how the physical state of a membrane regulates protein function. His work addresses how bilayer thickness steers protein traffic from the ER to the Golgi, and how lipid phase separation controls dimerization of <b>APP C99</b>, the precursor of the amyloid-β peptide in Alzheimer's disease.</p>
+        <!-- <p><b>Sangram Prusty</b> is a theoretical and computational chemist working at the interface of <b>statistical mechanics</b>, <b>membrane biophysics</b> and <b>cell biology</b>. A Ph.D. candidate at <b>Boston University</b> with <b>Prof. Qiang Cui</b> and <b>Prof. John E. Straub</b>, he builds multiscale models, from polarizable all-atom force fields to coarse-grained Martini membranes, to explain how the physical state of a membrane regulates protein function. His work addresses how bilayer thickness steers protein traffic from the ER to the Golgi, and how lipid phase separation controls dimerization of <b>APP C99</b>, the precursor of the amyloid-β peptide in Alzheimer's disease.</p>
         <p>His research is closely tied to experiment. He has collaborated with <b>cell biologists</b> on cargo sorting in the secretory pathway, with <b>NMR spectroscopists</b> on force-field validation, with the <b>Martini</b> community (<b>Marrink, Souza</b> and coworkers) on coarse-grained force-field development, and with <b>materials and electronic-structure scientists</b> on de novo peptides, combining rare-event sampling, free-energy methods and <b>machine learning</b> (GROMACS, OpenMM, PLUMED, PyTorch). Earlier, at <b>TIFR Hyderabad</b> and <b>IISER Kolkata</b>, where he majored in chemistry with a minor in biology, he showed how correlated fluctuations guide a viral peptide to its binding site on RNA.</p>
         <p>He has authored <b>8 publications</b>, six as first or co-first author, in <i>J. Chem. Theory Comput.</i>, <i>J. Chem. Inf. Model.</i>, <i>J. Chem. Phys.</i>, <i>J. Phys. Chem. B</i>, <i>J. Phys. Chem. Lett.</i> and <i>Biophys. J.</i>, with a first-author manuscript under review at <i>Science Advances</i>. He helped write an <b>NIH R21</b> proposal and a successful <b>NSF ACCESS</b> allocation, reviews for <i>J. Chem. Phys.</i> and <i>Biophysical Journal</i>, mentors undergraduate and high-school researchers, and hosts the <b>Greater Boston Area TheoChem Seminar Series</b>. He was a <b>DST–INSPIRE</b> scholar.</p>
+       -->
+       <p>
+        Sangram Prusty is a <strong>Ph.D. candidate</strong> in
+        Theoretical and Computational Chemistry at Boston University,
+        co-advised by <strong>Prof. Qiang Cui and Prof. John E. Straub</strong>.
+        His research lies at the intersection of statistical mechanics,
+        computational biophysics, and cell biology, driven by a fundamental
+        question: how do complex molecular environments shape biomolecular
+        interactions, dynamics, and biological function?
+      </p>
+    
+      <p>
+        His doctoral research investigates the
+        <strong>reciprocal relationship between membrane heterogeneity
+        and protein behavior</strong>—how lipid composition and membrane
+        physical properties influence protein conformational dynamics,
+        association, and molecular recognition, and how proteins, in turn,
+        reorganize their surrounding membranes. By combining multiscale
+        molecular simulations, enhanced sampling approaches, and statistical
+        mechanics with experimental insights, he connects molecular-level
+        physical principles to collective membrane behavior and cellular
+        function. His work has advanced our understanding of membrane
+        phase-separation dynamics, protein association relevant to
+        Alzheimer's disease, and membrane-dependent intracellular protein
+        trafficking, while contributing to the development and validation
+        of molecular force fields. Building on these studies, his long-term
+        research vision is to integrate statistical mechanics, molecular
+        dynamics simulations, machine learning, and experimental insights
+        to develop predictive models of biomolecular processes in
+        heterogeneous and crowded cellular environments.
+      </p>
+    
+      <p>
+        Before joining Boston University, Sangram earned his
+        <strong>BS–MS dual degree</strong> in
+        <strong>Chemical Sciences,</strong> with a minor in
+        <strong>Biological Sciences</strong>, from the
+        <strong>Indian Institute of Science Education and Research
+        Kolkata, India</strong>, supported by the
+        <strong>DST–INSPIRE Scholarship</strong>, a competitive (top 1%)
+        national merit-based award. His research has resulted in multiple
+        first-author publications in leading journals of theoretical and
+        computational chemistry and collaborations with NMR spectroscopists,
+        cell biologists, and force-field developers. Beyond research, he
+        mentors undergraduate and high-school students through Boston
+        University's UROP and RISE programs, contributes to teaching in
+        physical chemistry and scientific computing, and helps foster
+        interdisciplinary scientific exchange through the Greater Boston
+        Area TheoChem Seminar Series.
+      </p>
       </div>
     </div>
 
     <h2 class="sec">Metrics</h2>
     <div class="stats four" id="stats">
       <a class="stat" href="#publications"><div class="num" data-to="8">8</div><div class="lab">Publications</div></a>
-      <a class="stat" href="#talks"><div class="num" data-to="4">4</div><div class="lab">Conference presentations</div></a>
+      <a class="stat" href="#talks"><div class="num" data-to="6">6</div><div class="lab">Conference presentations</div></a>
       <a class="stat" href="#awards"><div class="num" data-to="4">4</div><div class="lab">Awards and fellowships</div></a>
       <a class="stat" href="#awards"><div class="num" data-to="3">3</div><div class="lab">Grants and funding proposals</div></a>
     </div>
@@ -560,20 +623,20 @@ ul.did li::before { content: ""; position: absolute; left: 4px; top: 9px; width:
   <!-- ================= RESEARCH ================= -->
   <div class="view" id="v-research">
     <h2 class="page-title">Research</h2>
-    <p class="page-sub">I connect physical chemistry to biology across scales. Statistical mechanics and multiscale simulation explain how the physical state of a membrane shapes protein behavior, and better force fields make those simulations trustworthy.</p>
+    <p class="page-sub">My research bridges physical chemistry, machine learning, and biology, integrating statistical mechanics, molecular simulations, and experimental insights to understand how molecular interactions and complex environments govern biomolecular dynamics, organization, and function.</p>
 
 
     <article class="theme" id="t1">
       <div>
-        <h3>Membrane–protein coupling and lipid phase behavior</h3>
-        <p>Cell membranes are not passive solvents. Their thickness, order and lateral organization change which conformations and assemblies membrane proteins adopt. My doctoral work asks how these physical properties regulate proteins involved in neurodegeneration and in cellular trafficking.</p>
-        <p>With the Straub group I study APP C99, the precursor of amyloid-β, quantifying the thermodynamic competition between its dimerization and its partitioning into liquid-ordered and liquid-disordered domains, and the kinetics of phase separation in ternary lipid mixtures that contain it. With the Cui group and experimental cell biologists in the Miller and Januschke groups, I showed how bilayer thickness and transmembrane-domain dynamics drive directional ER–Golgi traffic through the cargo receptor Erv14/cornichon.</p>
+        <h3>Membrane Heterogeneity: Emergence, Thermodynamics, Dynamics, and Biological Function</h3>
+        <p>Biological membranes are dynamic, heterogeneous environments whose lateral organization emerges from collective lipid interactions and evolves through processes such as phase separation. My research investigates how microscopic molecular interactions govern the emergence and kinetics of membrane heterogeneity, and how the resulting variations in lipid composition and membrane physical properties influence protein conformational dynamics, association, and cellular function.</p>
+        <p>Using atomistic and coarse-grained molecular simulations combined with statistical mechanical approaches, I investigate the kinetics and mechanisms of lipid phase separation, identifying common domain-growth behavior across molecular resolutions despite differences in their microscopic interactions and dynamical timescales. Building on these insights, I use enhanced sampling and free-energy calculations to quantify how membrane heterogeneity regulates the thermodynamic competition between APP C99 dimerization and partitioning into liquid-ordered and liquid-disordered domains. In collaboration with experimental cell biologists, I also investigate how bilayer thickness and transmembrane-domain dynamics influence cargo recognition by Erv14/cornichon, connecting molecular mechanisms to directional ER–Golgi trafficking.</p>
       </div>
       <aside>
         <span class="lab">Disciplines</span>
-        <ul><li>Membrane biophysics</li><li>Cell biology</li><li>Neurodegeneration</li></ul>
+        <ul><li>Membrane biophysics</li><li>Cell biology</li><li>Neurodegenerative disease</li></ul>
         <span class="lab">Methods</span>
-        <ul><li>Coarse-grained and all-atom MD</li><li>Free-energy and rare-event sampling</li></ul>
+        <ul><li>Multiscale molecular dynamics simulation</li><li>Free-energy and rare-event sampling</li><li>Reaction rate theory</li><li>Generalized Langevin Equation</li></ul>
         <span class="lab">Papers</span>
         <a href="#publications">[1] Sci. Adv. (under review)</a><br><a href="#publications">[2] J. Chem. Phys. 2026</a><br><a href="#publications">[5] J. Chem. Theory Comput. 2025</a>
       </aside>
@@ -582,8 +645,8 @@ ul.did li::before { content: ""; position: absolute; left: 4px; top: 9px; width:
     <article class="theme" id="t2">
       <div>
         <h3>Force-field development: polarizable and coarse-grained models</h3>
-        <p>Simulations are only as reliable as their energy functions. Proteins with flexible loops and dense charge are especially hard to model, because electronic polarization matters and fixed-charge models can miss it.</p>
-        <p>I carried out a systematic comparison of polarizable (Drude) and nonpolarizable CHARMM-family force fields for such proteins, validating conformational dynamics against NMR in collaboration with Prof. Rafael Brüschweiler, and wrote a commentary on polarization in phosphorylated proteins for <i>Biophysical Journal</i>. At the coarse-grained level, I contribute to the development of Martini force fields with Prof. Siewert-Jan Marrink, Dr. Paulo C. T. Souza and coworkers. With materials and electronic-structure groups, I contributed to work combining first-principles theory and machine learning to reveal electronic-structure fluctuations in a de novo peptide.</p>
+        <p>The predictive accuracy of molecular simulations depends on how molecular interactions are represented across different levels of resolution. My research focuses on developing and evaluating molecular force fields to understand how their underlying physical approximations influence biomolecular conformational ensembles, dynamics, and thermodynamics.</p>
+        <p>At the atomistic level, I systematically compared polarizable Drude and fixed-charge CHARMM force fields, evaluating their ability to reproduce protein conformational ensembles against NMR measurements in collaboration with Prof. Rafael Brüschweiler. This work examined the roles of electronic polarization, protein conformation, and solvation in determining simulation accuracy. At the coarse-grained level, I contribute to the development and validation of Martini protein force fields in collaboration with Prof. Siewert-Jan Marrink, Dr. Paulo C. T. Souza, and colleagues, with the goal of improving transferable molecular models for biomolecular simulations.</p>
       </div>
       <aside>
         <span class="lab">Disciplines</span>
@@ -613,15 +676,23 @@ ul.did li::before { content: ""; position: absolute; left: 4px; top: 9px; width:
 
     <h2 class="sec">Collaborations across fields</h2>
     <div class="collabs">
-      <div class="collab"><span class="f">Cell biology</span><h4>Miller and Januschke groups</h4><p>Experimental tests of membrane-thickness-based cargo sorting by Erv14/cornichon.</p></div>
-      <div class="collab"><span class="f">NMR spectroscopy</span><h4>Brüschweiler group</h4><p>NMR validation of protein dynamics for polarizable and nonpolarizable force fields.</p></div>
-      <div class="collab"><span class="f">Coarse-grained modeling</span><h4>Marrink and Souza groups</h4><p>Development of Martini coarse-grained force fields.</p></div>
-      <div class="collab"><span class="f">Materials and electronic structure</span><h4>Copp, Sharifzadeh and Hochbaum groups</h4><p>First-principles theory and machine learning for de novo peptide electronics.</p></div>
+      <div class="collab"><span class="f">Cell biology</span><h4><a href="https://discovery.dundee.ac.uk/en/persons/liz-miller/" target="_blank" rel="noopener">Prof. Liz Miller</a></h4><p class="inst">University of Dundee, UK</p><p>Membrane thickness as a sorting signal in ER export via Erv14/cornichon.</p></div>
+      <div class="collab"><span class="f">NMR spectroscopy</span><h4><a href="https://chemistry.osu.edu/people/bruschweiler.1" target="_blank" rel="noopener">Prof. Rafael Brüschweiler</a></h4><p class="inst">The Ohio State University</p><p>NMR validation of force fields for flexible, highly charged proteins.</p></div>
+      <div class="collab"><span class="f">Solid-state NMR</span><h4><a href="https://chemistry.mit.edu/profile/mei-hong/" target="_blank" rel="noopener">Prof. Mei Hong</a></h4><p class="inst">Massachusetts Institute of Technology</p><p>Solid-state NMR and simulation of membrane proteins.</p></div>
+      <div class="collab"><span class="f">Coarse-grained modeling</span><h4><a href="https://www.rug.nl/staff/s.j.marrink/" target="_blank" rel="noopener">Prof. Siewert-Jan Marrink</a></h4><p class="inst">University of Groningen, Netherlands</p><p>Martini coarse-grained force-field development.</p></div>
+      <div class="collab"><span class="f">Coarse-grained modeling</span><h4><a href="https://www.ens-lyon.fr/LBMC/equipes/dynamics-and-control-of-biological-assemblies-and-macromolecular-machines/publications" target="_blank" rel="noopener">Dr. Paulo C. T. Souza</a></h4><p class="inst">CNRS and ENS de Lyon, France</p><p>Martini coarse-grained force-field development.</p></div>
+      <div class="collab"><span class="f">Electronic structure</span><h4><a href="https://sites.bu.edu/sharifzadeh/" target="_blank" rel="noopener">Prof. Sahar Sharifzadeh</a></h4><p class="inst">Boston University</p><p>First-principles theory and machine learning for de novo peptides.</p></div>
     </div>
 
     <div class="vision">
-      <h3>Looking ahead</h3>
-      <p>I aim to build predictive, physics-based models that connect membrane physical chemistry to cellular function, combining <b>multiscale force fields</b>, <b>machine learning</b> and <b>rare-event sampling</b>, and developed in close collaboration with experiment.</p>
+      <h3>Research Vision</h3>
+      <p> I aim to build predictive, physics-based molecular models that integrate
+        <b>statistical mechanics, multiscale simulations, machine learning,
+        and rare-event sampling</b> with experimental insights to uncover
+        how heterogeneous and crowded cellular environments govern biomolecular
+        thermodynamics, dynamics, and collective behavior, ultimately bridging
+        molecular-level physical mechanisms with cellular function and advancing
+        our understanding of processes underlying human health and disease.</p>
     </div>
   </div>
 
@@ -649,7 +720,9 @@ ul.did li::before { content: ""; position: absolute; left: 4px; top: 9px; width:
     <h2 class="page-title">Talks</h2>
     <p class="page-sub">Selected conference presentations.</p>
     <ul class="rec">
+      <li><span class="h">Decoding the Thermodynamic Competition Between APP-C99 Dimerization and Membrane Partitioning</span><span class="w">Oct 2026</span><span class="d">Poster · New England Computational Biology Symposium</span></li>
       <li><span class="h">Liquid-ordered membranes stabilize APP C99 dimers and amplify cholesterol sensitivity</span><span class="w">Feb 2026</span><span class="d">Poster · Biophysical Society Annual Meeting</span></li>
+      <li><span class="h">Three-stage kinetic mechanism of lipid phase separation in ternary lipid mixture:an all-atom and coarse-grained MD simulation study</span><span class="w">July 2024</span><span class="d">Poster · Biomembranes Symposium</span></li>
       <li><span class="h">Comparative study of Im7 dynamics: CHARMM36m vs. Drude2019 force fields with NMR validation</span><span class="w">Feb 2024</span><span class="d">Platform talk and poster · Biophysical Society Annual Meeting</span></li>
       <li><span class="h">Exploring protein–RNA recognition by investigating the TAR–Tat complex of immunodeficiency virus</span><span class="w">Jan 2021</span><span class="d">Flash talk · Statistical Mechanics in Chemistry and Biology (SMCB)</span></li>
       <li><span class="h">Dynamically restricted water stabilizes TAR RNA–Tat peptide complex formation</span><span class="w">Mar 2020</span><span class="d">Poster · Chemical Science Conference, IISER Kolkata · Best Poster Award</span></li>
@@ -794,9 +867,9 @@ ul.did li::before { content: ""; position: absolute; left: 4px; top: 9px; width:
     <h2 class="page-title">Skills</h2>
     <p class="page-sub">Scientific methods, software and professional skills.</p>
     <div class="skill-groups">
-      <div><h3>Scientific methods</h3><div class="chips"><span>Rare-event sampling</span><span>Free-energy methods</span><span>Force-field development</span><span>Polarizable models</span><span>Coarse-grained MD (Martini)</span><span>Phase-separation kinetics</span><span>Non-affine fluctuation analysis</span></div></div>
-      <div><h3>Software and programming</h3><div class="chips"><span>GROMACS</span><span>OpenMM</span><span>PLUMED</span><span>Gaussian</span><span>Python</span><span>PyTorch</span><span>MATLAB</span><span>Fortran</span><span>Bash</span></div></div>
-      <div><h3>Communication and leadership</h3><div class="chips"><span>Grant writing</span><span>Peer review</span><span>Research mentoring</span><span>Teaching</span><span>Seminar organization</span><span>VMD</span><span>PyMOL</span><span>Adobe Illustrator</span><span>LaTeX</span></div></div>
+      <div><h3>Scientific methods</h3><div class="chips"><span>Multiscale modeling</span><span>Rare-event sampling</span><span>Free-energy methods</span><span>Force-field development</span><span>Reaction Rate Theory</span><span>Non-equilibrium statistical mechanics</span><span>Machine Learning</span></div></div>
+      <div><h3>Software and programming</h3><div class="chips"><span>GROMACS</span><span>OpenMM</span><span>PLUMED</span><span>Gaussian</span><span>Python</span><span>PyTorch</span><span>MATLAB</span><span>Fortran</span><span>Bash</span><span>VMD</span><span>PyMOL</span><span>Adobe Illustrator</span><span>LaTeX</span></div></div>
+      <div><h3>Communication and leadership</h3><div class="chips"><span>Grant writing</span><span>Peer review</span><span>Research mentoring</span><span>Teaching</span><span>Seminar organization</span></div></div>
     </div>
   </div>
 </main>
@@ -888,52 +961,69 @@ function countUp() {
 
 /* ---------- Publications: add a new paper here ---------- */
 const pubs = [
-  { n: 1, year: 2026, first: true, topic: "membranes", status: "Under review",
+  { n: 1, year: 2026, doi: "10.64898/2026.08.05.742935", first: true, topic: "membranes", status: "Under review",
     authors: "Prusty, S.†, Li, X.†, Loyer, N., Ochoa, M. D. P., Riley, N., Smith, E., Januschke, J., Cui, Q.*, and Miller, E. A.*",
     title: "Bilayer thickness and transmembrane domain dynamics drive directional ER–Golgi traffic via Erv14/cornichon",
     venue: "Science Advances", detail: "" },
-  { n: 2, year: 2026, first: true, topic: "membranes",
+  { n: 2, year: 2026, doi: "10.1063/5.0350494", first: true, topic: "membranes",
     authors: "Prusty, S., Majumder, A., and Straub, J. E.*",
     title: "Exploring the thermodynamic competition between APP C99 dimerization and membrane partitioning in model liquid-ordered and disordered membranes",
     venue: "Journal of Chemical Physics", detail: "165, 124107" },
-  { n: 3, year: 2026, first: true, topic: "forcefields",
+  { n: 3, year: 2026, doi: "10.1016/j.bpj.2025.11.022", first: true, topic: "forcefields",
     authors: "Prusty, S. and Cui, Q.*",
     title: "New and notable: Polarizing phosphorylated proteins",
     venue: "Biophysical Journal", detail: "125, 1–3" },
-  { n: 4, year: 2025, first: true, topic: "forcefields",
+  { n: 4, year: 2025, doi: "10.1021/acs.jcim.5c01328", first: true, topic: "forcefields",
     authors: "Prusty, S., Brüschweiler, R., and Cui, Q.*",
     title: "Comparative analysis of polarizable and nonpolarizable CHARMM family force fields for proteins with flexible loops and high charge density",
     venue: "Journal of Chemical Information and Modeling", detail: "65(15), 8304–8321" },
-  { n: 5, year: 2025, first: true, topic: "membranes",
+  { n: 5, year: 2025, doi: "10.1021/acs.jctc.5c00016", first: true, topic: "membranes",
     authors: "Prusty, S.†, Pantelopulos, G. P.†, Bandara, A., and Straub, J. E.*",
     title: "Kinetics and mechanism of phase separation in ternary lipid mixtures containing APP C99",
     venue: "Journal of Chemical Theory and Computation", detail: "21(10), 5291–5303" },
-  { n: 6, year: 2025, first: false, topic: "other",
+  { n: 6, year: 2025, doi: "10.1021/acs.jcim.4c01979", first: false, topic: "other",
     authors: "Mastracco, P.†, Mohanam, L. N.†, Nagaro, G.†, Prusty, S., Oh, Y., Wu, R., Cui, Q., Hochbaum, A. I., Copp, S. M.*, and Sharifzadeh, S.*",
     title: "Dynamic electronic structure fluctuations in the de novo peptide ACC-dimer revealed by first-principles theory and machine learning",
     venue: "Journal of Chemical Information and Modeling", detail: "65, 2503–2512" },
-  { n: 7, year: 2024, first: false, topic: "rna",
+  { n: 7, year: 2024, doi: "10.1021/acs.jpclett.4c00740", first: false, topic: "rna",
     authors: "Chakraborty, A., Samant, D., Sarkar, R., Sangeet, S., Prusty, S., and Roy, S.*",
     title: "RNA's dynamic conformational selection and entropic allosteric mechanism in controlling cascade protein binding events",
     venue: "The Journal of Physical Chemistry Letters", detail: "15(23), 6115–6125" },
-  { n: 8, year: 2021, first: true, topic: "rna",
+  { n: 8, year: 2021, doi: "10.1021/acs.jpcb.1c07699", first: true, topic: "rna",
     authors: "Prusty, S., Sarkar, R., Chakraborty, A., and Roy, S.*",
     title: "Correlation in domain fluctuations navigates target search of a viral peptide along RNA",
     venue: "The Journal of Physical Chemistry B", detail: "125(46), 12678–12689" }
 ];
 const topicName = { membranes: "Membranes", forcefields: "Force fields", rna: "RNA–protein", other: "Electronic structure" };
 
+// function pubHTML(p) {
+//   return `<div class="pub">
+//     <span class="n">[${p.n}]</span>
+//     <div>
+//       <div class="t">${p.title}</div>
+//       <div class="a">${p.authors.replace("Prusty, S.", "<b>Prusty, S.</b>")}</div>
+//       <div class="v">${p.venue}${p.detail ? ", " + p.detail : ""} (${p.year})</div>
+//       <div class="row">
+//         ${p.status ? `<span class="tag rev">${p.status}</span>` : ""}
+//         ${p.first ? `<span class="tag">First author</span>` : ""}
+//         <span class="tag">${topicName[p.topic]}</span>
+//         <button class="cite-btn" type="button" data-n="${p.n}">Copy citation</button>
+//       </div>
+//     </div>
+//   </div>`;
+// }
 function pubHTML(p) {
   return `<div class="pub">
     <span class="n">[${p.n}]</span>
     <div>
-      <div class="t">${p.title}</div>
+      <div class="t">${p.doi ? `<a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">${p.title}</a>` : p.title}</div>
       <div class="a">${p.authors.replace("Prusty, S.", "<b>Prusty, S.</b>")}</div>
       <div class="v">${p.venue}${p.detail ? ", " + p.detail : ""} (${p.year})</div>
       <div class="row">
         ${p.status ? `<span class="tag rev">${p.status}</span>` : ""}
         ${p.first ? `<span class="tag">First author</span>` : ""}
         <span class="tag">${topicName[p.topic]}</span>
+        ${p.doi ? `<a class="doi-link" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">DOI ↗</a>` : ""}
         <button class="cite-btn" type="button" data-n="${p.n}">Copy citation</button>
       </div>
     </div>
